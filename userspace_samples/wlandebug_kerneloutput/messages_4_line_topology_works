@@ -1,0 +1,1000 @@
+Aug 28 21:00:00 my newsyslog[1791]: logfile turned over due to size>100K
+Aug 29 16:04:37 my reboot: rebooted by root
+Aug 29 16:04:37 my syslogd: exiting on signal 15
+Aug 29 16:05:34 my syslogd: kernel boot file is /boot/kernel/kernel
+Aug 29 16:05:34 my kernel: Copyright (c) 1992-2011 The FreeBSD Project.
+Aug 29 16:05:34 my kernel: Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+Aug 29 16:05:34 my kernel: The Regents of the University of California. All rights reserved.
+Aug 29 16:05:34 my kernel: FreeBSD is a registered trademark of The FreeBSD Foundation.
+Aug 29 16:05:34 my kernel: FreeBSD 9.0-BETA1 #18 r225166+96676f2: Thu Aug 25 10:59:03 UTC 2011
+Aug 29 16:05:34 my kernel: root@my.freebsd:/usr/obj/usr/src/sys/VNET_ABLE i386
+Aug 29 16:05:34 my kernel: WARNING: WITNESS option enabled, expect reduced performance.
+Aug 29 16:05:34 my kernel: CPU: Intel(R) Core(TM)2 Duo CPU     E6750  @ 2.66GHz (2645.55-MHz 686-class CPU)
+Aug 29 16:05:34 my kernel: Origin = "GenuineIntel"  Id = 0x6fb  Family = 6  Model = f  Stepping = 11
+Aug 29 16:05:34 my kernel: Features=0x783fbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,MMX,FXSR,SSE,SSE2>
+Aug 29 16:05:34 my kernel: Features2=0x9<SSE3,MON>
+Aug 29 16:05:34 my kernel: AMD Features=0x20100800<SYSCALL,NX,LM>
+Aug 29 16:05:34 my kernel: AMD Features2=0x1<LAHF>
+Aug 29 16:05:34 my kernel: real memory  = 536805376 (511 MB)
+Aug 29 16:05:34 my kernel: avail memory = 501792768 (478 MB)
+Aug 29 16:05:34 my kernel: WARNING: VIMAGE (virtualized network stack) is a highly experimental feature.
+Aug 29 16:05:34 my kernel: kbd1 at kbdmux0
+Aug 29 16:05:34 my kernel: acpi0: <VBOX VBOXXSDT> on motherboard
+Aug 29 16:05:34 my kernel: acpi0: Power Button (fixed)
+Aug 29 16:05:34 my kernel: acpi0: Sleep Button (fixed)
+Aug 29 16:05:34 my kernel: Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+Aug 29 16:05:34 my kernel: acpi_timer0: <32-bit timer at 3.579545MHz> port 0x4008-0x400b on acpi0
+Aug 29 16:05:34 my kernel: pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+Aug 29 16:05:34 my kernel: pci0: <ACPI PCI bus> on pcib0
+Aug 29 16:05:34 my kernel: isab0: <PCI-ISA bridge> at device 1.0 on pci0
+Aug 29 16:05:34 my kernel: isa0: <ISA bus> on isab0
+Aug 29 16:05:34 my kernel: atapci0: <Intel PIIX4 UDMA33 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0xd000-0xd00f at device 1.1 on pci0
+Aug 29 16:05:34 my kernel: ata0: <ATA channel 0> on atapci0
+Aug 29 16:05:34 my kernel: ata1: <ATA channel 1> on atapci0
+Aug 29 16:05:34 my kernel: vgapci0: <VGA-compatible display> mem 0xe0000000-0xe0ffffff irq 11 at device 2.0 on pci0
+Aug 29 16:05:34 my kernel: em0: <Intel(R) PRO/1000 Legacy Network Connection 1.0.3> port 0xd010-0xd017 mem 0xf0000000-0xf001ffff irq 10 at device 3.0 on pci0
+Aug 29 16:05:34 my kernel: em0: Ethernet address: 08:00:27:91:d7:5b
+Aug 29 16:05:34 my kernel: pci0: <base peripheral> at device 4.0 (no driver attached)
+Aug 29 16:05:34 my kernel: pcm0: <Intel ICH (82801AA)> port 0xd100-0xd1ff,0xd200-0xd23f irq 5 at device 5.0 on pci0
+Aug 29 16:05:34 my kernel: pcm0: <SigmaTel STAC9700/83/84 AC97 Codec>
+Aug 29 16:05:34 my kernel: pci0: <bridge> at device 7.0 (no driver attached)
+Aug 29 16:05:34 my kernel: acpi_acad0: <AC Adapter> on acpi0
+Aug 29 16:05:34 my kernel: atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+Aug 29 16:05:34 my kernel: atkbd0: <AT Keyboard> irq 1 on atkbdc0
+Aug 29 16:05:34 my kernel: kbd0 at atkbd0
+Aug 29 16:05:34 my kernel: atkbd0: [GIANT-LOCKED]
+Aug 29 16:05:34 my kernel: fdc0: <floppy drive controller> port 0x3f0-0x3f5,0x3f7 irq 6 drq 2 on acpi0
+Aug 29 16:05:34 my kernel: fdc0: does not respond
+Aug 29 16:05:34 my kernel: device_attach: fdc0 attach returned 6
+Aug 29 16:05:34 my kernel: driver bug: Unable to set devclass (devname: (null))
+Aug 29 16:05:34 my kernel: psm0: <PS/2 Mouse> irq 12 on atkbdc0
+Aug 29 16:05:34 my kernel: psm0: [GIANT-LOCKED]
+Aug 29 16:05:34 my kernel: psm0: model IntelliMouse Explorer, device ID 4
+Aug 29 16:05:34 my kernel: pmtimer0 on isa0
+Aug 29 16:05:34 my kernel: sc0: <System console> at flags 0x100 on isa0
+Aug 29 16:05:34 my kernel: sc0: VGA <16 virtual consoles, flags=0x300>
+Aug 29 16:05:34 my kernel: vga0: <Generic ISA VGA> at port 0x3c0-0x3df iomem 0xa0000-0xbffff on isa0
+Aug 29 16:05:34 my kernel: atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+Aug 29 16:05:34 my kernel: Event timer "RTC" frequency 32768 Hz quality 0
+Aug 29 16:05:34 my kernel: attimer0: <AT timer> at port 0x40 on isa0
+Aug 29 16:05:34 my kernel: Timecounter "i8254" frequency 1193182 Hz quality 0
+Aug 29 16:05:34 my kernel: Event timer "i8254" frequency 1193182 Hz quality 100
+Aug 29 16:05:34 my kernel: ppc0: parallel port not found.
+Aug 29 16:05:34 my kernel: Timecounters tick every 10.000 msec
+Aug 29 16:05:34 my kernel: pcm0: measured ac97 link rate at 64357 Hz
+Aug 29 16:05:34 my kernel: cd0 at ata1 bus 0 scbus1 target 0 lun 0
+Aug 29 16:05:34 my kernel: cd0: <VBOX CD-ROM 1.0> Removable CD-ROM SCSI-0 device 
+Aug 29 16:05:34 my kernel: cd0: 33.300MB/s transfers (UDMA2, ATAPI 12bytes, PIO 65534bytes)
+Aug 29 16:05:34 my kernel: cd0: cd present [14565 x 2048 byte records]
+Aug 29 16:05:34 my kernel: ada0 at ata0 bus 0 scbus0 target 0 lun 0
+Aug 29 16:05:34 my kernel: ada0: <VBOX HARDDISK 1.0> ATA-6 device
+Aug 29 16:05:34 my kernel: ada0: 33.300MB/s transfers (UDMA2, PIO 65536bytes)
+Aug 29 16:05:34 my kernel: ada0: 40960MB (83886080 512 byte sectors: 16H 63S/T 16383C)
+Aug 29 16:05:34 my kernel: ada0: Previously was known as ad0
+Aug 29 16:05:34 my kernel: Timecounter "TSC" frequency 2645550295 Hz quality 800
+Aug 29 16:05:34 my kernel: WARNING: WITNESS option enabled, expect reduced performance.
+Aug 29 16:05:34 my kernel: Trying to mount root from ufs:/dev/ad0s1a [rw]...
+Aug 29 16:05:41 my kernel: .
+Aug 29 16:08:05 my login: ROOT LOGIN (root) ON ttyv0
+Aug 29 16:08:11 my kernel: Using visibility wtap plugin...
+Aug 29 16:08:11 my kernel: Loaded wtap wireless simulator
+Aug 29 16:08:19 my kernel: wtap0: ieee80211_radiotap_attach: no tx channel, radiotap 0x0wtap0: ieee80211_radiotap_attach: no rx channel, radiotap 0x0wtap1: ieee80211_radiotap_attach: no tx channel, radiotap 0x0wtap1: ieee80211_radiotap_attach: no rx channel, radiotap 0x0wtap2: ieee80211_radiotap_attach: no tx channel, radiotap 0x0wtap2: ieee80211_radiotap_attach: no rx channel, radiotap 0x0wtap3: ieee80211_radiotap_attach: no tx channel, radiotap 0x0wtap3: ieee80211_radiotap_attach: no rx channel, radiotap 0x0wlan0: Ethernet address: 00:98:9a:98:96:97
+Aug 29 16:08:19 my kernel: wlan1: Ethernet address: 00:98:9a:98:96:98
+Aug 29 16:08:19 my kernel: wlan2: Ethernet address: 00:98:9a:98:96:99
+Aug 29 16:08:19 my kernel: wlan3: Ethernet address: 00:98:9a:98:96:9a
+Aug 29 16:08:20 my kernel: lock order reversal:
+Aug 29 16:08:20 my kernel: 1st 0xc10a9bc0 allprison (allprison) @ /usr/src/sys/kern/kern_jail.c:932
+Aug 29 16:08:20 my kernel: 2nd 0xc122374c vnet_sysinit_sxlock (vnet_sysinit_sxlock) @ /usr/src/sys/net/vnet.c:614
+Aug 29 16:08:20 my kernel: KDB: stack backtrace:
+Aug 29 16:08:20 my kernel: db_trace_self_wrapper(c0f1051a,6b636f6c,20402029,7273752f,6372732f,...) at db_trace_self_wrapper+0x26
+Aug 29 16:08:20 my kernel: kdb_backtrace(c0a4034b,c0f13ea7,c3555138,c3559098,c33b9a08,...) at kdb_backtrace+0x2a
+Aug 29 16:08:20 my kernel: _witness_debugger(c0f13ea7,c122374c,c0f231a7,c3559098,c0f232fa,...) at _witness_debugger+0x25
+Aug 29 16:08:20 my kernel: witness_checkorder(c122374c,1,c0f232fa,266,0,...) at witness_checkorder+0x839
+Aug 29 16:08:20 my kernel: _sx_slock(c122374c,0,c0f232fa,266,c3b585c0,...) at _sx_slock+0x85
+Aug 29 16:08:20 my kernel: vnet_sysinit(c3c8a000,c106bd00,5540,c3c89828,c103f258,...) at vnet_sysinit+0x2b
+Aug 29 16:08:20 my kernel: vnet_alloc(c3c89828,c0f07bc5,0,10,0,...) at vnet_alloc+0xdf
+Aug 29 16:08:20 my kernel: kern_jail_set(c3b585c0,c3533880,1,c3533880,c3c21000,...) at kern_jail_set+0x1968
+Aug 29 16:08:20 my kernel: jail_set(c3b585c0,c33b9cec,c33b9d28,c0f12795,0,...) at jail_set+0x50
+Aug 29 16:08:20 my kernel: syscallenter(c3b585c0,c33b9ce4,c33b9ce4,0,0,...) at syscallenter+0x263
+Aug 29 16:08:20 my kernel: syscall(c33b9d28) at syscall+0x34
+Aug 29 16:08:20 my kernel: Xint0x80_syscall() at Xint0x80_syscall+0x21
+Aug 29 16:08:20 my kernel: --- syscall (507, FreeBSD ELF32, jail_set), eip = 0x280f18eb, esp = 0xbfbfeaec, ebp = 0xbfbfeb98 ---
+Aug 29 16:08:20 my kernel: wlan0: ieee80211_start: ignore queue, in SCAN state
+Aug 29 16:08:20 my kernel: wlan1: ieee80211_start: ignore queue, in SCAN state
+Aug 29 16:08:20 my kernel: wlan2: ieee80211_start: ignore queue, in SCAN state
+Aug 29 16:08:20 my kernel: wlan3: ieee80211_start: ignore queue, in SCAN state
+Aug 29 16:08:30 my kernel: wlan1: [00:98:9a:98:96:97] peer link: IDLE -> OPEN SENT
+Aug 29 16:08:30 my kernel: wlan1: [00:98:9a:98:96:97] send PEER OPEN action: localid 0xa0c3
+Aug 29 16:08:30 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 29 16:08:30 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 29 16:08:30 my kernel: wlan1: [00:98:9a:98:96:97] mesh link timeout, state 1, retry counter 0
+Aug 29 16:08:30 my kernel: wlan1: [00:98:9a:98:96:97] send PEER OPEN action: localid 0xa0c3
+Aug 29 16:08:30 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 29 16:08:30 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 29 16:08:30 my kernel: wlan1: [00:98:9a:98:96:97] mesh link timeout, state 1, retry counter 1
+Aug 29 16:08:30 my kernel: wlan1: [00:98:9a:98:96:97] send PEER OPEN action: localid 0xa0c3
+Aug 29 16:08:30 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 29 16:08:30 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 29 16:08:30 my kernel: wlan1: [00:98:9a:98:96:97] mesh link timeout, state 1, retry counter 2
+Aug 29 16:08:30 my kernel: wlan1: [00:98:9a:98:96:97] send PEER CLOSE action: localid 0xa0c3, peerid 0xaba3 reason 6
+Aug 29 16:08:30 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 29 16:08:30 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 29 16:08:30 my kernel: wlan1: [00:98:9a:98:96:97] peer link: OPEN SENT -> HOLDING
+Aug 29 16:08:30 my kernel: wlan1: [00:98:9a:98:96:97] mesh link timeout, state 5, retry counter 0
+Aug 29 16:08:30 my kernel: wlan1: [00:98:9a:98:96:97] peer link: HOLDING -> IDLE
+Aug 29 16:08:31 my kernel: wlan0: [00:98:9a:98:96:98] peer link: IDLE -> OPEN SENT
+Aug 29 16:08:31 my kernel: wlan0: [00:98:9a:98:96:98] send PEER OPEN action: localid 0x5909
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] peer link: IDLE -> OPEN SENT
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] send PEER OPEN action: localid 0x5e7e
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:97] recv PEER OPEN, lid 0x5909
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:97] peer link: IDLE -> OPEN RECEIVED
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:97] send PEER OPEN action: localid 0x76fe
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:97] send PEER CONFIRM action: localid 0x76fe, peerid 0x5909
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 29 16:08:31 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 29 16:08:31 my kernel: wlan0: [00:98:9a:98:96:98] recv PEER OPEN, lid 0x76fe
+Aug 29 16:08:31 my kernel: wlan0: [00:98:9a:98:96:98] peer link: OPEN SENT -> OPEN RECEIVED
+Aug 29 16:08:31 my kernel: wlan0: [00:98:9a:98:96:98] send PEER CONFIRM action: localid 0x5909, peerid 0x76fe
+Aug 29 16:08:31 my kernel: wlan0: [00:98:9a:98:96:98] recv PEER CONFIRM, local id 0x76fe, peer id 0x5909
+Aug 29 16:08:31 my kernel: wlan0: [00:98:9a:98:96:98] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 29 16:08:31 my kernel: wlan0: [00:98:9a:98:96:98] start path discovery (src <none>)
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:97] recv PEER CONFIRM, local id 0x5909, peer id 0x76fe
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:97] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:97] start path discovery (src <none>)
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:97] received PREQ, source 00:98:9a:98:96:97
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:97] reply to 00:98:9a:98:96:97
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:97] start path discovery (src <none>)
+Aug 29 16:08:31 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:98
+Aug 29 16:08:31 my kernel: wlan0: [00:98:9a:98:96:98] reply to 00:98:9a:98:96:98
+Aug 29 16:08:31 my kernel: wlan0: [00:98:9a:98:96:98] start path discovery (src <none>)
+Aug 29 16:08:31 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 29 16:08:31 my kernel: wlan0: [00:98:9a:98:96:98] update path to 00:98:9a:98:96:97, hopcount 0:0 metric 0:0
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:97] received PREP from 00:98:9a:98:96:97
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:97] update path to 00:98:9a:98:96:98, hopcount 0:0 metric 0:0
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] mesh link timeout, state 1, retry counter 0
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] send PEER OPEN action: localid 0x5e7e
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 29 16:08:31 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] mesh link timeout, state 1, retry counter 1
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] send PEER OPEN action: localid 0x5e7e
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 29 16:08:31 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] mesh link timeout, state 1, retry counter 2
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] send PEER CLOSE action: localid 0x5e7e, peerid 0xaba3 reason 6
+Aug 29 16:08:31 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 29 16:08:31 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] peer link: OPEN SENT -> HOLDING
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] mesh link timeout, state 5, retry counter 0
+Aug 29 16:08:31 my kernel: wlan2: [00:98:9a:98:96:98] peer link: HOLDING -> IDLE
+Aug 29 16:08:32 my kernel: wlan1: [00:98:9a:98:96:99] peer link: IDLE -> OPEN SENT
+Aug 29 16:08:32 my kernel: wlan1: [00:98:9a:98:96:99] send PEER OPEN action: localid 0xa58a
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] peer link: IDLE -> OPEN SENT
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] send PEER OPEN action: localid 0xe0
+Aug 29 16:08:32 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:98] recv PEER OPEN, lid 0xa58a
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:98] peer link: IDLE -> OPEN RECEIVED
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:98] send PEER OPEN action: localid 0xf76
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:98] send PEER CONFIRM action: localid 0xf76, peerid 0xa58a
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:9a] discard action frame, unknown node
+Aug 29 16:08:32 my kernel: wlan1: [00:98:9a:98:96:99] recv PEER OPEN, lid 0xf76
+Aug 29 16:08:32 my kernel: wlan1: [00:98:9a:98:96:99] peer link: OPEN SENT -> OPEN RECEIVED
+Aug 29 16:08:32 my kernel: wlan1: [00:98:9a:98:96:99] send PEER CONFIRM action: localid 0xa58a, peerid 0xf76
+Aug 29 16:08:32 my kernel: wlan1: [00:98:9a:98:96:99] recv PEER CONFIRM, local id 0xf76, peer id 0xa58a
+Aug 29 16:08:32 my kernel: wlan1: [00:98:9a:98:96:99] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 29 16:08:32 my kernel: wlan1: [00:98:9a:98:96:99] start path discovery (src <none>)
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 29 16:08:32 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 29 16:08:32 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:98
+Aug 29 16:08:32 my kernel: wlan0: [00:98:9a:98:96:98] forward PREQ from 00:98:9a:98:96:98
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:98] recv PEER CONFIRM, local id 0xa58a, peer id 0xf76
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:98] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:98] start path discovery (src <none>)
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:98
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:98] reply to 00:98:9a:98:96:98
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:98] start path discovery (src <none>)
+Aug 29 16:08:32 my kernel: wlan1: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:99
+Aug 29 16:08:32 my kernel: wlan1: [00:98:9a:98:96:99] reply to 00:98:9a:98:96:99
+Aug 29 16:08:32 my kernel: wlan1: [00:98:9a:98:96:99] start path discovery (src <none>)
+Aug 29 16:08:32 my kernel: wlan1: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:99
+Aug 29 16:08:32 my kernel: wlan1: [00:98:9a:98:96:99] update path to 00:98:9a:98:96:98, hopcount 0:0 metric 0:0
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 29 16:08:32 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:98] update path to 00:98:9a:98:96:99, hopcount 0:0 metric 0:0
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] mesh link timeout, state 1, retry counter 0
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] send PEER OPEN action: localid 0xe0
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:9a] discard action frame, unknown node
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] mesh link timeout, state 1, retry counter 1
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] send PEER OPEN action: localid 0xe0
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:9a] discard action frame, unknown node
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] mesh link timeout, state 1, retry counter 2
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] send PEER CLOSE action: localid 0xe0, peerid 0xaba3 reason 6
+Aug 29 16:08:32 my kernel: wlan2: [00:98:9a:98:96:9a] discard action frame, unknown node
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] peer link: OPEN SENT -> HOLDING
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] mesh link timeout, state 5, retry counter 0
+Aug 29 16:08:32 my kernel: wlan3: [00:98:9a:98:96:99] peer link: HOLDING -> IDLE
+Aug 29 16:08:33 my kernel: wlan2: [00:98:9a:98:96:9a] peer link: IDLE -> OPEN SENT
+Aug 29 16:08:33 my kernel: wlan2: [00:98:9a:98:96:9a] send PEER OPEN action: localid 0x5b58
+Aug 29 16:08:33 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 29 16:08:33 my kernel: wlan3: [00:98:9a:98:96:99] recv PEER OPEN, lid 0x5b58
+Aug 29 16:08:33 my kernel: wlan3: [00:98:9a:98:96:99] peer link: IDLE -> OPEN RECEIVED
+Aug 29 16:08:33 my kernel: wlan3: [00:98:9a:98:96:99] send PEER OPEN action: localid 0x47a7
+Aug 29 16:08:33 my kernel: wlan3: [00:98:9a:98:96:99] send PEER CONFIRM action: localid 0x47a7, peerid 0x5b58
+Aug 29 16:08:33 my kernel: wlan2: [00:98:9a:98:96:9a] recv PEER OPEN, lid 0x47a7
+Aug 29 16:08:33 my kernel: wlan2: [00:98:9a:98:96:9a] peer link: OPEN SENT -> OPEN RECEIVED
+Aug 29 16:08:33 my kernel: wlan2: [00:98:9a:98:96:9a] send PEER CONFIRM action: localid 0x5b58, peerid 0x47a7
+Aug 29 16:08:33 my kernel: wlan2: [00:98:9a:98:96:9a] recv PEER CONFIRM, local id 0x47a7, peer id 0x5b58
+Aug 29 16:08:33 my kernel: wlan2: [00:98:9a:98:96:9a] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 29 16:08:33 my kernel: wlan2: [00:98:9a:98:96:9a] start path discovery (src <none>)
+Aug 29 16:08:33 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 29 16:08:33 my kernel: wlan1: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:99
+Aug 29 16:08:33 my kernel: wlan1: [00:98:9a:98:96:99] forward PREQ from 00:98:9a:98:96:99
+Aug 29 16:08:33 my kernel: wlan3: [00:98:9a:98:96:99] recv PEER CONFIRM, local id 0x5b58, peer id 0x47a7
+Aug 29 16:08:33 my kernel: wlan3: [00:98:9a:98:96:99] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 29 16:08:33 my kernel: wlan3: [00:98:9a:98:96:99] start path discovery (src <none>)
+Aug 29 16:08:33 my kernel: wlan3: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:99
+Aug 29 16:08:33 my kernel: wlan3: [00:98:9a:98:96:99] reply to 00:98:9a:98:96:99
+Aug 29 16:08:33 my kernel: wlan3: [00:98:9a:98:96:99] start path discovery (src <none>)
+Aug 29 16:08:33 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:99
+Aug 29 16:08:33 my kernel: wlan0: [00:98:9a:98:96:98] discard PREQ from 00:98:9a:98:96:99, old seq no 3 <= 3
+Aug 29 16:08:33 my kernel: wlan2: [00:98:9a:98:96:9a] received PREQ, source 00:98:9a:98:96:9a
+Aug 29 16:08:33 my kernel: wlan2: [00:98:9a:98:96:9a] reply to 00:98:9a:98:96:9a
+Aug 29 16:08:33 my kernel: wlan2: [00:98:9a:98:96:9a] start path discovery (src <none>)
+Aug 29 16:08:33 my kernel: wlan2: [00:98:9a:98:96:9a] received PREP from 00:98:9a:98:96:9a
+Aug 29 16:08:33 my kernel: wlan2: [00:98:9a:98:96:9a] update path to 00:98:9a:98:96:99, hopcount 0:0 metric 0:0
+Aug 29 16:08:33 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 29 16:08:33 my kernel: wlan3: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:99
+Aug 29 16:08:33 my kernel: wlan3: [00:98:9a:98:96:99] update path to 00:98:9a:98:96:9a, hopcount 0:0 metric 0:0
+Aug 29 16:08:47 my login: ROOT LOGIN (root) ON ttyv1
+Aug 29 16:09:01 my kernel: wlan0: [00:98:9a:98:96:97] discard data frame, not to me
+Aug 29 16:09:01 my kernel: wlan2: [00:98:9a:98:96:97] add mcast route, mesh seqno 5
+Aug 29 16:09:01 my kernel: wlan3: [00:98:9a:98:96:97] add mcast route, mesh seqno 5
+Aug 29 16:09:01 my kernel: wlan3: [00:98:9a:98:96:97] start path discovery (src 00:98:9a:98:96:9a)
+Aug 29 16:09:01 my kernel: wlan3: [00:98:9a:98:96:97] queue frame until path found
+Aug 29 16:09:01 my kernel: wlan2: [00:98:9a:98:96:9a] received PREQ, source 00:98:9a:98:96:9a
+Aug 29 16:09:01 my kernel: wlan2: [00:98:9a:98:96:9a] forward PREQ from 00:98:9a:98:96:9a
+Aug 29 16:09:01 my kernel: wlan1: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:9a
+Aug 29 16:09:01 my kernel: wlan1: [00:98:9a:98:96:99] forward PREQ from 00:98:9a:98:96:9a
+Aug 29 16:09:01 my kernel: wlan1: [00:98:9a:98:96:99] intermediate reply for PREQ from 00:98:9a:98:96:9a
+Aug 29 16:09:01 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:9a
+Aug 29 16:09:01 my kernel: wlan0: [00:98:9a:98:96:98] reply to 00:98:9a:98:96:9a
+Aug 29 16:09:01 my kernel: wlan0: [00:98:9a:98:96:9a] start path discovery (src <none>)
+Aug 29 16:09:01 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 29 16:09:01 my kernel: wlan2: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:9a
+Aug 29 16:09:01 my kernel: wlan2: [00:98:9a:98:96:98] discard PREQ from 00:98:9a:98:96:9a, old seq no 3 <= 3
+Aug 29 16:09:01 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 29 16:09:01 my kernel: wlan2: [00:98:9a:98:96:98] discard PREP from 00:98:9a:98:96:97, old seq no 3 <= 3
+Aug 29 16:09:01 my kernel: wlan1: [00:98:9a:98:96:97] received PREP from 00:98:9a:98:96:97
+Aug 29 16:09:01 my kernel: wlan1: [00:98:9a:98:96:97] propagate PREP from 00:98:9a:98:96:97
+Aug 29 16:09:01 my kernel: wlan1: [00:98:9a:98:96:97] discard PREP for 00:98:9a:98:96:97, wrong seqno 3 != 3
+Aug 29 16:09:01 my kernel: wlan1: [00:98:9a:98:96:97] received PREQ, source 00:98:9a:98:96:97
+Aug 29 16:09:01 my kernel: wlan1: [00:98:9a:98:96:97] forward PREQ from 00:98:9a:98:96:97
+Aug 29 16:09:01 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 29 16:09:01 my kernel: wlan0: [00:98:9a:98:96:98] discard PREP from 00:98:9a:98:96:98, old seq no 3 <= 3
+Aug 29 16:09:01 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 29 16:09:01 my kernel: wlan2: [00:98:9a:98:96:98] discard PREP from 00:98:9a:98:96:98, old seq no 3 <= 4
+Aug 29 16:11:17 my kernel: wlan0: [00:98:9a:98:96:97] discard data frame, not to me
+Aug 29 16:11:17 my kernel: wlan2: [00:98:9a:98:96:97] add mcast route, mesh seqno 6
+Aug 29 16:11:17 my kernel: wlan2: [00:98:9a:98:96:97] mesh_find_txnode: !valid or proxy, flags 0x0
+Aug 29 16:11:17 my kernel: wlan2: [00:98:9a:98:96:97] frame not fwd'd, no path
+Aug 29 16:11:17 my kernel: wlan3: [00:98:9a:98:96:97] add mcast route, mesh seqno 6
+Aug 29 16:11:17 my kernel: wlan2: [00:98:9a:98:96:97] mesh_find_txnode: !valid or proxy, flags 0x0
+Aug 29 16:11:17 my kernel: wlan2: [00:98:9a:98:96:97] frame not fwd'd, no path
+Aug 29 16:11:26 my kernel: wlan0: [00:98:9a:98:96:97] discard data frame, not to me
+Aug 29 16:11:26 my kernel: wlan2: [00:98:9a:98:96:97] add mcast route, mesh seqno 8
+Aug 29 16:11:26 my kernel: wlan3: [00:98:9a:98:96:97] add mcast route, mesh seqno 8
+Aug 29 16:11:26 my kernel: wlan3: [00:98:9a:98:96:97] start path discovery (src 00:98:9a:98:96:9a)
+Aug 29 16:11:26 my kernel: wlan3: [00:98:9a:98:96:97] queue frame until path found
+Aug 29 16:11:26 my kernel: wlan2: [00:98:9a:98:96:9a] received PREQ, source 00:98:9a:98:96:9a
+Aug 29 16:11:26 my kernel: wlan2: [00:98:9a:98:96:9a] forward PREQ from 00:98:9a:98:96:9a
+Aug 29 16:11:26 my kernel: wlan1: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:9a
+Aug 29 16:11:26 my kernel: wlan1: [00:98:9a:98:96:99] forward PREQ from 00:98:9a:98:96:9a
+Aug 29 16:11:26 my kernel: wlan1: [00:98:9a:98:96:99] intermediate reply for PREQ from 00:98:9a:98:96:9a
+Aug 29 16:11:26 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:9a
+Aug 29 16:11:26 my kernel: wlan0: [00:98:9a:98:96:98] reply to 00:98:9a:98:96:9a
+Aug 29 16:11:26 my kernel: wlan0: [00:98:9a:98:96:9a] start path discovery (src <none>)
+Aug 29 16:11:26 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 29 16:11:26 my kernel: wlan2: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:9a
+Aug 29 16:11:26 my kernel: wlan2: [00:98:9a:98:96:98] discard PREQ from 00:98:9a:98:96:9a, old seq no 4 <= 4
+Aug 29 16:11:26 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 29 16:11:26 my kernel: wlan2: [00:98:9a:98:96:98] discard PREP from 00:98:9a:98:96:97, old seq no 4 <= 4
+Aug 29 16:11:26 my kernel: wlan1: [00:98:9a:98:96:97] received PREP from 00:98:9a:98:96:97
+Aug 29 16:11:26 my kernel: wlan1: [00:98:9a:98:96:97] propagate PREP from 00:98:9a:98:96:97
+Aug 29 16:11:26 my kernel: wlan1: [00:98:9a:98:96:97] discard PREP for 00:98:9a:98:96:97, wrong seqno 4 != 5
+Aug 29 16:11:26 my kernel: wlan1: [00:98:9a:98:96:97] received PREQ, source 00:98:9a:98:96:97
+Aug 29 16:11:26 my kernel: wlan1: [00:98:9a:98:96:97] forward PREQ from 00:98:9a:98:96:97
+Aug 29 16:11:26 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 29 16:11:26 my kernel: wlan0: [00:98:9a:98:96:98] propagate PREP from 00:98:9a:98:96:98
+Aug 29 16:11:26 my kernel: wlan0: [00:98:9a:98:96:98] discard PREP for 00:98:9a:98:96:98, wrong seqno 4 != 5
+Aug 29 16:11:26 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 29 16:11:26 my kernel: wlan2: [00:98:9a:98:96:98] propagate PREP from 00:98:9a:98:96:98
+Aug 29 16:11:26 my kernel: wlan2: [00:98:9a:98:96:98] discard PREP for 00:98:9a:98:96:98, wrong seqno 4 != 5
+Aug 29 16:11:26 my kernel: wlan1: [00:98:9a:98:96:97] received PREP from 00:98:9a:98:96:97
+Aug 29 16:11:26 my kernel: wlan1: [00:98:9a:98:96:97] discard PREP from 00:98:9a:98:96:97, old seq no 5 <= 6
+Aug 29 16:11:26 my kernel: wlan1: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:99
+Aug 29 16:11:26 my kernel: wlan1: [00:98:9a:98:96:99] propagate PREP from 00:98:9a:98:96:99
+Aug 29 16:11:26 my kernel: wlan1: [00:98:9a:98:96:99] discard PREP for 00:98:9a:98:96:99, wrong seqno 4 != 5
+Aug 29 16:11:26 my kernel: wlan3: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:99
+Aug 29 16:11:26 my kernel: wlan3: [00:98:9a:98:96:99] discard PREP for 00:98:9a:98:96:99, wrong seqno 4 != 5
+Aug 29 16:11:26 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 29 16:11:26 my kernel: wlan0: [00:98:9a:98:96:98] discard PREP from 00:98:9a:98:96:98, old seq no 5 <= 5
+Aug 29 16:11:26 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 29 16:11:26 my kernel: wlan2: [00:98:9a:98:96:98] discard PREP from 00:98:9a:98:96:98, old seq no 5 <= 5
+Aug 29 16:11:44 my kernel: wlan0: [00:98:9a:98:96:97] discard data frame, not to me
+Aug 29 16:11:44 my kernel: wlan2: [00:98:9a:98:96:97] add mcast route, mesh seqno 9
+Aug 29 16:11:44 my kernel: wlan3: [00:98:9a:98:96:97] add mcast route, mesh seqno 9
+Aug 29 16:11:44 my kernel: wlan3: [00:98:9a:98:96:97] start path discovery (src 00:98:9a:98:96:9a)
+Aug 29 16:11:44 my kernel: wlan3: [00:98:9a:98:96:97] queue frame until path found
+Aug 29 16:11:44 my kernel: wlan2: [00:98:9a:98:96:9a] received PREQ, source 00:98:9a:98:96:9a
+Aug 29 16:11:44 my kernel: wlan2: [00:98:9a:98:96:9a] forward PREQ from 00:98:9a:98:96:9a
+Aug 29 16:11:44 my kernel: wlan1: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:9a
+Aug 29 16:11:44 my kernel: wlan1: [00:98:9a:98:96:99] forward PREQ from 00:98:9a:98:96:9a
+Aug 29 16:11:44 my kernel: wlan1: [00:98:9a:98:96:99] intermediate reply for PREQ from 00:98:9a:98:96:9a
+Aug 29 16:11:44 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:9a
+Aug 29 16:11:44 my kernel: wlan0: [00:98:9a:98:96:98] reply to 00:98:9a:98:96:9a
+Aug 29 16:11:44 my kernel: wlan0: [00:98:9a:98:96:9a] start path discovery (src <none>)
+Aug 29 16:11:44 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 29 16:11:44 my kernel: wlan2: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:9a
+Aug 29 16:11:44 my kernel: wlan2: [00:98:9a:98:96:98] discard PREQ from 00:98:9a:98:96:9a, old seq no 5 <= 5
+Aug 29 16:11:44 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 29 16:11:44 my kernel: wlan2: [00:98:9a:98:96:98] discard PREP from 00:98:9a:98:96:97, old seq no 5 <= 5
+Aug 29 16:11:44 my kernel: wlan1: [00:98:9a:98:96:97] received PREP from 00:98:9a:98:96:97
+Aug 29 16:11:44 my kernel: wlan1: [00:98:9a:98:96:97] propagate PREP from 00:98:9a:98:96:97
+Aug 29 16:11:44 my kernel: wlan1: [00:98:9a:98:96:97] discard PREP for 00:98:9a:98:96:97, wrong seqno 5 != 7
+Aug 29 16:11:44 my kernel: wlan1: [00:98:9a:98:96:97] received PREQ, source 00:98:9a:98:96:97
+Aug 29 16:11:44 my kernel: wlan1: [00:98:9a:98:96:97] forward PREQ from 00:98:9a:98:96:97
+Aug 29 16:11:44 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 29 16:11:44 my kernel: wlan0: [00:98:9a:98:96:98] propagate PREP from 00:98:9a:98:96:98
+Aug 29 16:11:44 my kernel: wlan0: [00:98:9a:98:96:98] discard PREP for 00:98:9a:98:96:98, wrong seqno 5 != 7
+Aug 29 16:11:44 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 29 16:11:44 my kernel: wlan2: [00:98:9a:98:96:98] propagate PREP from 00:98:9a:98:96:98
+Aug 29 16:11:44 my kernel: wlan2: [00:98:9a:98:96:98] discard PREP for 00:98:9a:98:96:98, wrong seqno 5 != 7
+Aug 29 16:11:44 my kernel: wlan1: [00:98:9a:98:96:97] received PREP from 00:98:9a:98:96:97
+Aug 29 16:11:44 my kernel: wlan1: [00:98:9a:98:96:97] discard PREP from 00:98:9a:98:96:97, old seq no 7 <= 8
+Aug 29 16:11:44 my kernel: wlan1: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:99
+Aug 29 16:11:44 my kernel: wlan1: [00:98:9a:98:96:99] propagate PREP from 00:98:9a:98:96:99
+Aug 29 16:11:44 my kernel: wlan1: [00:98:9a:98:96:99] discard PREP for 00:98:9a:98:96:99, wrong seqno 5 != 7
+Aug 29 16:11:44 my kernel: wlan3: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:99
+Aug 29 16:11:44 my kernel: wlan3: [00:98:9a:98:96:99] discard PREP for 00:98:9a:98:96:99, wrong seqno 5 != 7
+Aug 29 16:11:44 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 29 16:11:44 my kernel: wlan0: [00:98:9a:98:96:98] discard PREP from 00:98:9a:98:96:98, old seq no 7 <= 7
+Aug 29 16:11:44 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 29 16:11:44 my kernel: wlan2: [00:98:9a:98:96:98] discard PREP from 00:98:9a:98:96:98, old seq no 7 <= 7
+Aug 30 13:39:00 my date: date set by root
+Aug 30 13:39:03 my kernel: lock order reversal:
+Aug 30 13:39:03 my kernel: 1st 0xcd57e414 bufwait (bufwait) @ /usr/src/sys/kern/vfs_bio.c:2658
+Aug 30 13:39:03 my kernel: 2nd 0xc3da8200 dirhash (dirhash) @ /usr/src/sys/ufs/ufs/ufs_dirhash.c:284
+Aug 30 13:39:03 my kernel: KDB: stack backtrace:
+Aug 30 13:39:03 my kernel: db_trace_self_wrapper(c0f1051a,7366752f,7366752f,7269645f,68736168,...) at db_trace_self_wrapper+0x26
+Aug 30 13:39:03 my kernel: kdb_backtrace(c0a4034b,c0f13ea7,c3559510,c355cd88,c33857cc,...) at kdb_backtrace+0x2a
+Aug 30 13:39:03 my kernel: _witness_debugger(c0f13ea7,c3da8200,c0f43692,c355cd88,c0f43317,...) at _witness_debugger+0x25
+Aug 30 13:39:03 my kernel: witness_checkorder(c3da8200,9,c0f43317,11c,0,...) at witness_checkorder+0x839
+Aug 30 13:39:03 my kernel: _sx_xlock(c3da8200,0,c0f43317,11c,c3b4715c,...) at _sx_xlock+0x85
+Aug 30 13:39:03 my kernel: ufsdirhash_acquire(cd57e3b4,c3b4715c,c33858fc,ce4cd2f8,c338589c,...) at ufsdirhash_acquire+0x35
+Aug 30 13:39:03 my kernel: ufsdirhash_add(c3b4715c,c33858fc,92f8,c3385888,c338588c,...) at ufsdirhash_add+0x13
+Aug 30 13:39:03 my kernel: ufs_direnter(c3db5220,c3db2660,c33858fc,c3385ba4,0,...) at ufs_direnter+0x739
+Aug 30 13:39:03 my kernel: ufs_makeinode(c3385ba4,0,c3385ae8,c3385a44,c0d72c75,...) at ufs_makeinode+0x59d
+Aug 30 13:39:03 my kernel: ufs_create(c3385ae8,c3385b00,0,0,c3385b64,...) at ufs_create+0x30
+Aug 30 13:39:03 my kernel: VOP_CREATE_APV(c105a240,c3385ae8,c3385ba4,c3385a80,0,...) at VOP_CREATE_APV+0xa5
+Aug 30 13:39:03 my kernel: vn_open_cred(c3385b64,c3385c2c,1a4,0,c359b300,...) at vn_open_cred+0x215
+Aug 30 13:39:03 my kernel: vn_open(c3385b64,c3385c2c,1a4,c38bdd90,4e562b1d,...) at vn_open+0x3b
+Aug 30 13:39:03 my kernel: kern_openat(c38ca8a0,ffffff9c,284b0180,0,602,...) at kern_openat+0x1ec
+Aug 30 13:39:03 my kernel: kern_open(c38ca8a0,284b0180,0,601,1b6,...) at kern_open+0x35
+Aug 30 13:39:03 my kernel: open(c38ca8a0,c3385cec,c3385d28,c0f12795,0,...) at open+0x30
+Aug 30 13:39:03 my kernel: syscallenter(c38ca8a0,c3385ce4,c3385ce4,0,0,...) at syscallenter+0x263
+Aug 30 13:39:03 my kernel: syscall(c3385d28) at syscall+0x34
+Aug 30 13:39:03 my kernel: Xint0x80_syscall() at Xint0x80_syscall+0x21
+Aug 30 13:39:03 my kernel: --- syscall (5, FreeBSD ELF32, open), eip = 0x806a6b7, esp = 0xbfbfe50c, ebp = 0xbfbfe538 ---
+Aug 30 13:39:21 my dhclient: New IP Address (em0): 192.168.1.103
+Aug 30 13:39:21 my dhclient: New Subnet Mask (em0): 255.255.255.0
+Aug 30 13:39:21 my dhclient: New Broadcast Address (em0): 192.168.1.255
+Aug 30 13:39:21 my dhclient: New Routers (em0): 192.168.1.1
+Aug 30 13:39:55 my kernel: lock order reversal:
+Aug 30 13:39:55 my kernel: 1st 0xc406fe28 ufs (ufs) @ /usr/src/sys/kern/vfs_subr.c:2134
+Aug 30 13:39:55 my kernel: 2nd 0xcd59653c bufwait (bufwait) @ /usr/src/sys/ufs/ffs/ffs_vnops.c:260
+Aug 30 13:39:55 my kernel: 3rd 0xc416f278 ufs (ufs) @ /usr/src/sys/kern/vfs_subr.c:2134
+Aug 30 13:39:55 my kernel: KDB: stack backtrace:
+Aug 30 13:39:55 my kernel: db_trace_self_wrapper(c0f1051a,632e7262,3331323a,6f000a34,632e7370,...) at db_trace_self_wrapper+0x26
+Aug 30 13:39:55 my kernel: kdb_backtrace(c0a4034b,c0f13ec0,c3559510,c355cd20,c33b03d8,...) at kdb_backtrace+0x2a
+Aug 30 13:39:55 my kernel: _witness_debugger(c0f13ec0,c416f278,c0f03088,c355cd20,c0f1bd85,...) at _witness_debugger+0x25
+Aug 30 13:39:55 my kernel: witness_checkorder(c416f278,9,c0f1bd85,856,0,...) at witness_checkorder+0x839
+Aug 30 13:39:55 my kernel: __lockmgr_args(c416f278,80100,c416f298,0,0,...) at __lockmgr_args+0x824
+Aug 30 13:39:55 my kernel: ffs_lock(c33b0500,c0a51b7b,c0f1b102,80100,c416f220,...) at ffs_lock+0x8a
+Aug 30 13:39:55 my kernel: VOP_LOCK1_APV(c105a240,c33b0500,c3b590b0,c106a8e0,c416f220,...) at VOP_LOCK1_APV+0xb5
+Aug 30 13:39:55 my kernel: _vn_lock(c416f220,80100,c0f1bd85,856,4,...) at _vn_lock+0x5e
+Aug 30 13:39:55 my kernel: vget(c416f220,80100,c3b59000,50,0,...) at vget+0xb9
+Aug 30 13:39:55 my kernel: vfs_hash_get(c38a6798,1a9801,80000,c3b59000,c33b0644,...) at vfs_hash_get+0xe6
+Aug 30 13:39:55 my kernel: ffs_vgetf(c38a6798,1a9801,80000,c33b0644,1,...) at ffs_vgetf+0x49
+Aug 30 13:39:55 my kernel: softdep_sync_buf(c406fdd0,cd5964dc,1,106,0,...) at softdep_sync_buf+0x4a3
+Aug 30 13:39:55 my kernel: ffs_syncvnode(c406fdd0,1,c10c8cbc,4,c0f0aba3,...) at ffs_syncvnode+0x24c
+Aug 30 13:39:55 my kernel: ffs_truncate(c406fdd0,1200,0,880,c359b300,...) at ffs_truncate+0x7a3
+Aug 30 13:39:55 my kernel: ufs_direnter(c406fdd0,c416f220,c33b09d8,c33b0b68,cd556a30,...) at ufs_direnter+0x921
+Aug 30 13:39:55 my kernel: ufs_mkdir(c33b0bf8,c33b0c0c,0,0,c33b0b90,...) at ufs_mkdir+0x8ef
+Aug 30 13:39:55 my kernel: VOP_MKDIR_APV(c105a240,c33b0bf8,c33b0b68,c33b0b90,0,...) at VOP_MKDIR_APV+0xa5
+Aug 30 13:39:55 my kernel: kern_mkdirat(c3b59000,ffffff9c,bfbfea35,0,1ff,...) at kern_mkdirat+0x2a1
+Aug 30 13:39:55 my kernel: kern_mkdir(c3b59000,bfbfea35,0,1ff,c33b0c7c,...) at kern_mkdir+0x2e
+Aug 30 13:39:55 my kernel: mkdir(c3b59000,c33b0cec,c33b0d28,c0f12795,0,...) at mkdir+0x29
+Aug 30 13:39:55 my kernel: syscallenter(c3b59000,c33b0ce4,c33b0ce4,0,0,...) at syscallenter+0x263
+Aug 30 13:39:55 my kernel: syscall(c33b0d28) at syscall+0x34
+Aug 30 13:39:55 my kernel: Xint0x80_syscall() at Xint0x80_syscall+0x21
+Aug 30 13:39:55 my kernel: --- syscall (136, FreeBSD ELF32, mkdir), eip = 0x281731f3, esp = 0xbfbfe78c, ebp = 0xbfbfe858 ---
+Aug 30 14:24:26 my reboot: rebooted by root
+Aug 30 14:24:26 my syslogd: exiting on signal 15
+Aug 30 14:25:21 my syslogd: kernel boot file is /boot/kernel/kernel
+Aug 30 14:25:21 my kernel: Copyright (c) 1992-2011 The FreeBSD Project.
+Aug 30 14:25:21 my kernel: Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+Aug 30 14:25:21 my kernel: The Regents of the University of California. All rights reserved.
+Aug 30 14:25:21 my kernel: FreeBSD is a registered trademark of The FreeBSD Foundation.
+Aug 30 14:25:21 my kernel: FreeBSD 9.0-BETA2 #19 r225237+65bfc47-dirty: Tue Aug 30 14:03:21 UTC 2011
+Aug 30 14:25:21 my kernel: root@my.freebsd:/usr/obj/usr/src/sys/VNET_ABLE i386
+Aug 30 14:25:21 my kernel: WARNING: WITNESS option enabled, expect reduced performance.
+Aug 30 14:25:21 my kernel: CPU: Intel(R) Core(TM)2 Duo CPU     E6750  @ 2.66GHz (2645.59-MHz 686-class CPU)
+Aug 30 14:25:21 my kernel: Origin = "GenuineIntel"  Id = 0x6fb  Family = 6  Model = f  Stepping = 11
+Aug 30 14:25:21 my kernel: Features=0x783fbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,MMX,FXSR,SSE,SSE2>
+Aug 30 14:25:21 my kernel: Features2=0x9<SSE3,MON>
+Aug 30 14:25:21 my kernel: AMD Features=0x20100800<SYSCALL,NX,LM>
+Aug 30 14:25:21 my kernel: AMD Features2=0x1<LAHF>
+Aug 30 14:25:21 my kernel: real memory  = 536805376 (511 MB)
+Aug 30 14:25:21 my kernel: avail memory = 501788672 (478 MB)
+Aug 30 14:25:21 my kernel: WARNING: VIMAGE (virtualized network stack) is a highly experimental feature.
+Aug 30 14:25:21 my kernel: kbd1 at kbdmux0
+Aug 30 14:25:21 my kernel: acpi0: <VBOX VBOXXSDT> on motherboard
+Aug 30 14:25:21 my kernel: acpi0: Power Button (fixed)
+Aug 30 14:25:21 my kernel: acpi0: Sleep Button (fixed)
+Aug 30 14:25:21 my kernel: Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+Aug 30 14:25:21 my kernel: acpi_timer0: <32-bit timer at 3.579545MHz> port 0x4008-0x400b on acpi0
+Aug 30 14:25:21 my kernel: pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+Aug 30 14:25:21 my kernel: pci0: <ACPI PCI bus> on pcib0
+Aug 30 14:25:21 my kernel: isab0: <PCI-ISA bridge> at device 1.0 on pci0
+Aug 30 14:25:21 my kernel: isa0: <ISA bus> on isab0
+Aug 30 14:25:21 my kernel: atapci0: <Intel PIIX4 UDMA33 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0xd000-0xd00f at device 1.1 on pci0
+Aug 30 14:25:21 my kernel: ata0: <ATA channel 0> on atapci0
+Aug 30 14:25:21 my kernel: ata1: <ATA channel 1> on atapci0
+Aug 30 14:25:21 my kernel: vgapci0: <VGA-compatible display> mem 0xe0000000-0xe0ffffff irq 11 at device 2.0 on pci0
+Aug 30 14:25:21 my kernel: em0: <Intel(R) PRO/1000 Legacy Network Connection 1.0.3> port 0xd010-0xd017 mem 0xf0000000-0xf001ffff irq 10 at device 3.0 on pci0
+Aug 30 14:25:21 my kernel: em0: Ethernet address: 08:00:27:91:d7:5b
+Aug 30 14:25:21 my kernel: pci0: <base peripheral> at device 4.0 (no driver attached)
+Aug 30 14:25:21 my kernel: pcm0: <Intel ICH (82801AA)> port 0xd100-0xd1ff,0xd200-0xd23f irq 5 at device 5.0 on pci0
+Aug 30 14:25:21 my kernel: pcm0: <SigmaTel STAC9700/83/84 AC97 Codec>
+Aug 30 14:25:21 my kernel: pci0: <bridge> at device 7.0 (no driver attached)
+Aug 30 14:25:21 my kernel: acpi_acad0: <AC Adapter> on acpi0
+Aug 30 14:25:21 my kernel: atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+Aug 30 14:25:21 my kernel: atkbd0: <AT Keyboard> irq 1 on atkbdc0
+Aug 30 14:25:21 my kernel: kbd0 at atkbd0
+Aug 30 14:25:21 my kernel: atkbd0: [GIANT-LOCKED]
+Aug 30 14:25:21 my kernel: fdc0: <floppy drive controller> port 0x3f0-0x3f5,0x3f7 irq 6 drq 2 on acpi0
+Aug 30 14:25:21 my kernel: fdc0: does not respond
+Aug 30 14:25:21 my kernel: device_attach: fdc0 attach returned 6
+Aug 30 14:25:21 my kernel: driver bug: Unable to set devclass (devname: (null))
+Aug 30 14:25:21 my kernel: psm0: <PS/2 Mouse> irq 12 on atkbdc0
+Aug 30 14:25:21 my kernel: psm0: [GIANT-LOCKED]
+Aug 30 14:25:21 my kernel: psm0: model IntelliMouse Explorer, device ID 4
+Aug 30 14:25:21 my kernel: pmtimer0 on isa0
+Aug 30 14:25:21 my kernel: sc0: <System console> at flags 0x100 on isa0
+Aug 30 14:25:21 my kernel: sc0: VGA <16 virtual consoles, flags=0x300>
+Aug 30 14:25:21 my kernel: vga0: <Generic ISA VGA> at port 0x3c0-0x3df iomem 0xa0000-0xbffff on isa0
+Aug 30 14:25:21 my kernel: atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+Aug 30 14:25:21 my kernel: Event timer "RTC" frequency 32768 Hz quality 0
+Aug 30 14:25:21 my kernel: attimer0: <AT timer> at port 0x40 on isa0
+Aug 30 14:25:21 my kernel: Timecounter "i8254" frequency 1193182 Hz quality 0
+Aug 30 14:25:21 my kernel: Event timer "i8254" frequency 1193182 Hz quality 100
+Aug 30 14:25:21 my kernel: ppc0: parallel port not found.
+Aug 30 14:25:21 my kernel: Timecounters tick every 10.000 msec
+Aug 30 14:25:21 my kernel: pcm0: measured ac97 link rate at 39388 Hz
+Aug 30 14:25:21 my kernel: ada0 at ata0 bus 0 scbus0 target 0 lun 0
+Aug 30 14:25:21 my kernel: ada0: <VBOX HARDDISK 1.0> ATA-6 device
+Aug 30 14:25:21 my kernel: ada0: 33.300MB/s transfers (UDMA2, PIO 65536bytes)
+Aug 30 14:25:21 my kernel: ada0: 40960MB (83886080 512 byte sectors: 16H 63S/T 16383C)
+Aug 30 14:25:21 my kernel: ada0: Previously was known as ad0
+Aug 30 14:25:21 my kernel: cd0 at ata1 bus 0 scbus1 target 0 lun 0
+Aug 30 14:25:21 my kernel: cd0: <VBOX CD-ROM 1.0> Removable CD-ROM SCSI-0 device 
+Aug 30 14:25:21 my kernel: cd0: 33.300MB/s transfers (UDMA2, ATAPI 12bytes, PIO 65534bytes)
+Aug 30 14:25:21 my kernel: cd0: cd present [14565 x 2048 byte records]
+Aug 30 14:25:21 my kernel: Timecounter "TSC" frequency 2645586199 Hz quality 800
+Aug 30 14:25:21 my kernel: WARNING: WITNESS option enabled, expect reduced performance.
+Aug 30 14:25:21 my kernel: Trying to mount root from ufs:/dev/ad0s1a [rw]...
+Aug 30 14:25:27 my kernel: .
+Aug 30 14:27:20 my login: ROOT LOGIN (root) ON ttyv0
+Aug 30 14:27:25 my kernel: Using visibility wtap plugin...
+Aug 30 14:27:25 my kernel: Loaded wtap wireless simulator
+Aug 30 14:27:29 my login: ROOT LOGIN (root) ON ttyv1
+Aug 30 14:27:42 my kernel: wtap0: ieee80211_radiotap_attach: no tx channel, radiotap 0x0wtap0: ieee80211_radiotap_attach: no rx channel, radiotap 0x0
+Aug 30 14:27:42 my kernel: wtap1: ieee80211_radiotap_attach: no tx channel, radiotap 0x0wtap1: ieee80211_radiotap_attach: no rx channel, radiotap 0x0wtap2: ieee80211_radiotap_attach: no tx channel, radiotap 0x0wtap2: ieee80211_radiotap_attach: no rx channel, radiotap 0x0wtap3: ieee80211_radiotap_attach: no tx channel, radiotap 0x0wtap3: ieee80211_radiotap_attach: no rx channel, radiotap 0x0wlan0: Ethernet address: 00:98:9a:98:96:97
+Aug 30 14:27:42 my kernel: wlan1: Ethernet address: 00:98:9a:98:96:98
+Aug 30 14:27:42 my kernel: wlan2: Ethernet address: 00:98:9a:98:96:99
+Aug 30 14:27:42 my kernel: wlan3: Ethernet address: 00:98:9a:98:96:9a
+Aug 30 14:27:42 my kernel: lock order reversal:
+Aug 30 14:27:42 my kernel: 1st 0xc10ae520 allprison (allprison) @ /usr/src/sys/kern/kern_jail.c:932
+Aug 30 14:27:42 my kernel: 2nd 0xc12280ec vnet_sysinit_sxlock (vnet_sysinit_sxlock) @ /usr/src/sys/net/vnet.c:614
+Aug 30 14:27:42 my kernel: KDB: stack backtrace:
+Aug 30 14:27:42 my kernel: db_trace_self_wrapper(c0f156ac,6b636f6c,20402029,7273752f,6372732f,...) at db_trace_self_wrapper+0x26
+Aug 30 14:27:42 my kernel: kdb_backtrace(c0a430fb,c0f190c7,c3556138,c355a098,c33b3a08,...) at kdb_backtrace+0x2a
+Aug 30 14:27:42 my kernel: _witness_debugger(c0f190c7,c12280ec,c0f283c7,c355a098,c0f2851a,...) at _witness_debugger+0x25
+Aug 30 14:27:42 my kernel: witness_checkorder(c12280ec,1,c0f2851a,266,0,...) at witness_checkorder+0x839
+Aug 30 14:27:42 my kernel: _sx_slock(c12280ec,0,c0f2851a,266,c3b61b80,...) at _sx_slock+0x85
+Aug 30 14:27:42 my kernel: vnet_sysinit(c3c8c000,c1070600,5540,c3875828,c1043a98,...) at vnet_sysinit+0x2b
+Aug 30 14:27:42 my kernel: vnet_alloc(c3875828,c0f0cd45,0,10,0,...) at vnet_alloc+0xdf
+Aug 30 14:27:42 my kernel: kern_jail_set(c3b61b80,c35b8880,1,c35b8880,c3c24588,...) at kern_jail_set+0x1968
+Aug 30 14:27:42 my kernel: jail_set(c3b61b80,c33b3cec,c33b3d28,c0f179b5,0,...) at jail_set+0x50
+Aug 30 14:27:42 my kernel: syscallenter(c3b61b80,c33b3ce4,c33b3ce4,0,0,...) at syscallenter+0x263
+Aug 30 14:27:42 my kernel: syscall(c33b3d28) at syscall+0x34
+Aug 30 14:27:42 my kernel: Xint0x80_syscall() at Xint0x80_syscall+0x21
+Aug 30 14:27:42 my kernel: --- syscall (507, FreeBSD ELF32, jail_set), eip = 0x280f18eb, esp = 0xbfbfeaec, ebp = 0xbfbfeb98 ---
+Aug 30 14:27:43 my kernel: wlan0: ieee80211_start: ignore queue, in SCAN state
+Aug 30 14:27:43 my kernel: wlan1: ieee80211_start: ignore queue, in SCAN state
+Aug 30 14:27:43 my kernel: wlan2: ieee80211_start: ignore queue, in SCAN state
+Aug 30 14:27:43 my kernel: wlan3: ieee80211_start: ignore queue, in SCAN state
+Aug 30 14:27:53 my kernel: wlan1: [00:98:9a:98:96:97] peer link: IDLE -> OPEN SENT
+Aug 30 14:27:53 my kernel: wlan1: [00:98:9a:98:96:97] send PEER OPEN action: localid 0x8431
+Aug 30 14:27:53 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:27:53 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:27:53 my kernel: wlan1: [00:98:9a:98:96:97] mesh link timeout, state 1, retry counter 0
+Aug 30 14:27:53 my kernel: wlan1: [00:98:9a:98:96:97] send PEER OPEN action: localid 0x8431
+Aug 30 14:27:53 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:27:53 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:27:53 my kernel: wlan1: [00:98:9a:98:96:97] mesh link timeout, state 1, retry counter 1
+Aug 30 14:27:53 my kernel: wlan1: [00:98:9a:98:96:97] send PEER OPEN action: localid 0x8431
+Aug 30 14:27:53 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:27:53 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:27:53 my kernel: wlan1: [00:98:9a:98:96:97] mesh link timeout, state 1, retry counter 2
+Aug 30 14:27:53 my kernel: wlan1: [00:98:9a:98:96:97] send PEER CLOSE action: localid 0x8431, peerid 0xfd23 reason 6
+Aug 30 14:27:53 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:27:53 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:27:53 my kernel: wlan1: [00:98:9a:98:96:97] peer link: OPEN SENT -> HOLDING
+Aug 30 14:27:53 my kernel: wlan1: [00:98:9a:98:96:97] mesh link timeout, state 5, retry counter 0
+Aug 30 14:27:53 my kernel: wlan1: [00:98:9a:98:96:97] peer link: HOLDING -> IDLE
+Aug 30 14:27:54 my kernel: wlan0: [00:98:9a:98:96:98] peer link: IDLE -> OPEN SENT
+Aug 30 14:27:54 my kernel: wlan0: [00:98:9a:98:96:98] send PEER OPEN action: localid 0x9546
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] peer link: IDLE -> OPEN SENT
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] send PEER OPEN action: localid 0xc5b6
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:97] recv PEER OPEN, lid 0x9546
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:97] peer link: IDLE -> OPEN RECEIVED
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:97] send PEER OPEN action: localid 0xfe8d
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:97] send PEER CONFIRM action: localid 0xfe8d, peerid 0x9546
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:27:54 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:27:54 my kernel: wlan0: [00:98:9a:98:96:98] recv PEER OPEN, lid 0xfe8d
+Aug 30 14:27:54 my kernel: wlan0: [00:98:9a:98:96:98] peer link: OPEN SENT -> OPEN RECEIVED
+Aug 30 14:27:54 my kernel: wlan0: [00:98:9a:98:96:98] send PEER CONFIRM action: localid 0x9546, peerid 0xfe8d
+Aug 30 14:27:54 my kernel: wlan0: [00:98:9a:98:96:98] recv PEER CONFIRM, local id 0xfe8d, peer id 0x9546
+Aug 30 14:27:54 my kernel: wlan0: [00:98:9a:98:96:98] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 30 14:27:54 my kernel: wlan0: [00:98:9a:98:96:98] start path discovery (src <none>), target seq 0
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:97] recv PEER CONFIRM, local id 0x9546, peer id 0xfe8d
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:97] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:97] start path discovery (src <none>), target seq 0
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:97] received PREQ, source 00:98:9a:98:96:97
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:97] reply to 00:98:9a:98:96:97
+Aug 30 14:27:54 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:98
+Aug 30 14:27:54 my kernel: wlan0: [00:98:9a:98:96:98] reply to 00:98:9a:98:96:98
+Aug 30 14:27:54 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 30 14:27:54 my kernel: wlan0: [00:98:9a:98:96:98] prefer path to 00:98:9a:98:96:97, hopcount 1:0 metric 0:0
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:97] received PREP from 00:98:9a:98:96:97
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:97] prefer path to 00:98:9a:98:96:98, hopcount 1:0 metric 0:0
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] mesh link timeout, state 1, retry counter 0
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] send PEER OPEN action: localid 0xc5b6
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:27:54 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] mesh link timeout, state 1, retry counter 1
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] send PEER OPEN action: localid 0xc5b6
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:27:54 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] mesh link timeout, state 1, retry counter 2
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] send PEER CLOSE action: localid 0xc5b6, peerid 0xfd23 reason 6
+Aug 30 14:27:54 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:27:54 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] peer link: OPEN SENT -> HOLDING
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] mesh link timeout, state 5, retry counter 0
+Aug 30 14:27:54 my kernel: wlan2: [00:98:9a:98:96:98] peer link: HOLDING -> IDLE
+Aug 30 14:27:55 my kernel: wlan1: [00:98:9a:98:96:99] peer link: IDLE -> OPEN SENT
+Aug 30 14:27:55 my kernel: wlan1: [00:98:9a:98:96:99] send PEER OPEN action: localid 0x88e1
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] peer link: IDLE -> OPEN SENT
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] send PEER OPEN action: localid 0xd8e6
+Aug 30 14:27:55 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:98] recv PEER OPEN, lid 0x88e1
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:98] peer link: IDLE -> OPEN RECEIVED
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:98] send PEER OPEN action: localid 0x97b7
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:98] send PEER CONFIRM action: localid 0x97b7, peerid 0x88e1
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:9a] discard action frame, unknown node
+Aug 30 14:27:55 my kernel: wlan1: [00:98:9a:98:96:99] recv PEER OPEN, lid 0x97b7
+Aug 30 14:27:55 my kernel: wlan1: [00:98:9a:98:96:99] peer link: OPEN SENT -> OPEN RECEIVED
+Aug 30 14:27:55 my kernel: wlan1: [00:98:9a:98:96:99] send PEER CONFIRM action: localid 0x88e1, peerid 0x97b7
+Aug 30 14:27:55 my kernel: wlan1: [00:98:9a:98:96:99] recv PEER CONFIRM, local id 0x97b7, peer id 0x88e1
+Aug 30 14:27:55 my kernel: wlan1: [00:98:9a:98:96:99] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 30 14:27:55 my kernel: wlan1: [00:98:9a:98:96:99] start path discovery (src <none>), target seq 0
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 30 14:27:55 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 30 14:27:55 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:98
+Aug 30 14:27:55 my kernel: wlan0: [00:98:9a:98:96:98] forward PREQ from 00:98:9a:98:96:98
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:98] recv PEER CONFIRM, local id 0x88e1, peer id 0x97b7
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:98] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:98] start path discovery (src <none>), target seq 0
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:98
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:98] reply to 00:98:9a:98:96:98
+Aug 30 14:27:55 my kernel: wlan1: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:99
+Aug 30 14:27:55 my kernel: wlan1: [00:98:9a:98:96:99] reply to 00:98:9a:98:96:99
+Aug 30 14:27:55 my kernel: wlan1: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:99
+Aug 30 14:27:55 my kernel: wlan1: [00:98:9a:98:96:99] prefer path to 00:98:9a:98:96:98, hopcount 1:0 metric 0:0
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 30 14:27:55 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:98] prefer path to 00:98:9a:98:96:99, hopcount 1:0 metric 0:0
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] mesh link timeout, state 1, retry counter 0
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] send PEER OPEN action: localid 0xd8e6
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:9a] discard action frame, unknown node
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] mesh link timeout, state 1, retry counter 1
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] send PEER OPEN action: localid 0xd8e6
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:9a] discard action frame, unknown node
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] mesh link timeout, state 1, retry counter 2
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] send PEER CLOSE action: localid 0xd8e6, peerid 0xfd23 reason 6
+Aug 30 14:27:55 my kernel: wlan2: [00:98:9a:98:96:9a] discard action frame, unknown node
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] peer link: OPEN SENT -> HOLDING
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] mesh link timeout, state 5, retry counter 0
+Aug 30 14:27:55 my kernel: wlan3: [00:98:9a:98:96:99] peer link: HOLDING -> IDLE
+Aug 30 14:27:56 my kernel: wlan2: [00:98:9a:98:96:9a] peer link: IDLE -> OPEN SENT
+Aug 30 14:27:56 my kernel: wlan2: [00:98:9a:98:96:9a] send PEER OPEN action: localid 0x7591
+Aug 30 14:27:56 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 30 14:27:56 my kernel: wlan3: [00:98:9a:98:96:99] recv PEER OPEN, lid 0x7591
+Aug 30 14:27:56 my kernel: wlan3: [00:98:9a:98:96:99] peer link: IDLE -> OPEN RECEIVED
+Aug 30 14:27:56 my kernel: wlan3: [00:98:9a:98:96:99] send PEER OPEN action: localid 0xc698
+Aug 30 14:27:56 my kernel: wlan3: [00:98:9a:98:96:99] send PEER CONFIRM action: localid 0xc698, peerid 0x7591
+Aug 30 14:27:56 my kernel: wlan2: [00:98:9a:98:96:9a] recv PEER OPEN, lid 0xc698
+Aug 30 14:27:56 my kernel: wlan2: [00:98:9a:98:96:9a] peer link: OPEN SENT -> OPEN RECEIVED
+Aug 30 14:27:56 my kernel: wlan2: [00:98:9a:98:96:9a] send PEER CONFIRM action: localid 0x7591, peerid 0xc698
+Aug 30 14:27:56 my kernel: wlan2: [00:98:9a:98:96:9a] recv PEER CONFIRM, local id 0xc698, peer id 0x7591
+Aug 30 14:27:56 my kernel: wlan2: [00:98:9a:98:96:9a] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 30 14:27:56 my kernel: wlan2: [00:98:9a:98:96:9a] start path discovery (src <none>), target seq 0
+Aug 30 14:27:56 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 30 14:27:56 my kernel: wlan1: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:99
+Aug 30 14:27:56 my kernel: wlan1: [00:98:9a:98:96:99] forward PREQ from 00:98:9a:98:96:99
+Aug 30 14:27:56 my kernel: wlan3: [00:98:9a:98:96:99] recv PEER CONFIRM, local id 0x7591, peer id 0xc698
+Aug 30 14:27:56 my kernel: wlan3: [00:98:9a:98:96:99] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 30 14:27:56 my kernel: wlan3: [00:98:9a:98:96:99] start path discovery (src <none>), target seq 0
+Aug 30 14:27:56 my kernel: wlan3: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:99
+Aug 30 14:27:56 my kernel: wlan3: [00:98:9a:98:96:99] reply to 00:98:9a:98:96:99
+Aug 30 14:27:56 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:99
+Aug 30 14:27:56 my kernel: wlan0: [00:98:9a:98:96:98] discard PREQ from 00:98:9a:98:96:99, old seq no 3 <= 3
+Aug 30 14:27:56 my kernel: wlan2: [00:98:9a:98:96:9a] received PREQ, source 00:98:9a:98:96:9a
+Aug 30 14:27:56 my kernel: wlan2: [00:98:9a:98:96:9a] reply to 00:98:9a:98:96:9a
+Aug 30 14:27:56 my kernel: wlan2: [00:98:9a:98:96:9a] received PREP from 00:98:9a:98:96:9a
+Aug 30 14:27:56 my kernel: wlan2: [00:98:9a:98:96:9a] prefer path to 00:98:9a:98:96:99, hopcount 1:0 metric 0:0
+Aug 30 14:27:56 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 30 14:27:56 my kernel: wlan3: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:99
+Aug 30 14:27:56 my kernel: wlan3: [00:98:9a:98:96:99] prefer path to 00:98:9a:98:96:9a, hopcount 1:0 metric 0:0
+Aug 30 14:28:00 my kernel: wlan0: [00:98:9a:98:96:97] discard data frame, not to me
+Aug 30 14:28:00 my kernel: wlan2: [00:98:9a:98:96:97] add mcast route, mesh seqno 4
+Aug 30 14:28:00 my kernel: wlan3: [00:98:9a:98:96:97] add mcast route, mesh seqno 4
+Aug 30 14:28:00 my kernel: wlan3: [00:98:9a:98:96:97] start path discovery (src 00:98:9a:98:96:9a), target seq 0
+Aug 30 14:28:00 my kernel: wlan3: [00:98:9a:98:96:97] queue frame until path found
+Aug 30 14:28:00 my kernel: wlan2: [00:98:9a:98:96:9a] received PREQ, source 00:98:9a:98:96:9a
+Aug 30 14:28:00 my kernel: wlan2: [00:98:9a:98:96:9a] forward PREQ from 00:98:9a:98:96:9a
+Aug 30 14:28:00 my kernel: wlan1: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:9a
+Aug 30 14:28:00 my kernel: wlan1: [00:98:9a:98:96:99] discard PREQ from 00:98:9a:98:96:9a, old seq no 3 <= 3
+Aug 30 14:28:15 my kernel: wlan0: [00:98:9a:98:96:97] discard data frame, not to me
+Aug 30 14:28:15 my kernel: wlan2: [00:98:9a:98:96:97] add mcast route, mesh seqno 5
+Aug 30 14:28:15 my kernel: wlan3: [00:98:9a:98:96:97] add mcast route, mesh seqno 5
+Aug 30 14:28:15 my kernel: wlan3: [00:98:9a:98:96:97] start path discovery (src 00:98:9a:98:96:9a), target seq 0
+Aug 30 14:28:15 my kernel: wlan3: [00:98:9a:98:96:97] queue frame until path found
+Aug 30 14:28:15 my kernel: wlan2: [00:98:9a:98:96:9a] received PREQ, source 00:98:9a:98:96:9a
+Aug 30 14:28:15 my kernel: wlan2: [00:98:9a:98:96:9a] forward PREQ from 00:98:9a:98:96:9a
+Aug 30 14:28:15 my kernel: wlan1: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:9a
+Aug 30 14:28:15 my kernel: wlan1: [00:98:9a:98:96:99] forward PREQ from 00:98:9a:98:96:9a
+Aug 30 14:28:15 my kernel: wlan1: [00:98:9a:98:96:99] intermediate reply for PREQ from 00:98:9a:98:96:9a
+Aug 30 14:28:15 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:9a
+Aug 30 14:28:15 my kernel: wlan0: [00:98:9a:98:96:98] reply to 00:98:9a:98:96:9a
+Aug 30 14:28:15 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 30 14:28:15 my kernel: wlan2: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:9a
+Aug 30 14:28:15 my kernel: wlan2: [00:98:9a:98:96:98] discard PREQ from 00:98:9a:98:96:9a, old seq no 4 <= 4
+Aug 30 14:28:15 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 30 14:28:15 my kernel: wlan2: [00:98:9a:98:96:98] propagate PREP from 00:98:9a:98:96:97
+Aug 30 14:28:15 my kernel: wlan2: [00:98:9a:98:96:98] update path to 00:98:9a:98:96:9a, hopcount 0:2 metric 0:17018
+Aug 30 14:28:15 my kernel: wlan1: [00:98:9a:98:96:97] received PREP from 00:98:9a:98:96:97
+Aug 30 14:28:15 my kernel: wlan1: [00:98:9a:98:96:97] propagate PREP from 00:98:9a:98:96:97
+Aug 30 14:28:15 my kernel: wlan1: [00:98:9a:98:96:97] discard PREP for 00:98:9a:98:96:97, wrong orig seqno 4 != 1
+Aug 30 14:28:15 my kernel: wlan1: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:97
+Aug 30 14:28:15 my kernel: wlan1: [00:98:9a:98:96:99] propagate PREP from 00:98:9a:98:96:97
+Aug 30 14:28:15 my kernel: wlan1: [00:98:9a:98:96:99] discard PREP for 00:98:9a:98:96:97, wrong orig seqno 4 != 1
+Aug 30 14:28:15 my kernel: wlan3: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:97
+Aug 30 14:28:15 my kernel: wlan3: [00:98:9a:98:96:99] update path to 00:98:9a:98:96:9a, hopcount 0:3 metric 0:34036
+Aug 30 14:28:15 my kernel: wlan3: [00:98:9a:98:96:99] flush queued frame 0xc3829800 len 42
+Aug 30 14:28:15 my kernel: wlan3: [00:98:9a:98:96:99] flush queued frame 0xc382c700 len 42
+Aug 30 14:28:15 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 30 14:28:15 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 30 14:28:15 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 30 14:28:15 my kernel: wlan2: [00:98:9a:98:96:98] discard PREP from 00:98:9a:98:96:97, old seq no 3 < 4
+Aug 30 14:28:15 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 30 14:28:15 my kernel: wlan2: [00:98:9a:98:96:98] discard PREP from 00:98:9a:98:96:97, new metric 51054 > 17018
+Aug 30 14:28:15 my kernel: wlan3: [00:98:9a:98:96:9a] discard data frame, not to me
+Aug 30 14:28:15 my kernel: wlan3: [00:98:9a:98:96:9a] discard data frame, not to me
+Aug 30 14:28:15 my kernel: wlan0: [00:98:9a:98:96:97] discard data frame, not to me
+Aug 30 14:28:15 my kernel: wlan3: [00:98:9a:98:96:9a] discard data frame, not to me
+Aug 30 14:30:29 my kernel: wlan0: [00:98:9a:98:96:97] discard data frame, not to me
+Aug 30 14:30:29 my kernel: wlan3: [00:98:9a:98:96:9a] discard data frame, not to me
+Aug 30 14:30:54 my reboot: rebooted by root
+Aug 30 14:30:54 my syslogd: exiting on signal 15
+Aug 30 14:31:39 my syslogd: kernel boot file is /boot/kernel/kernel
+Aug 30 14:31:39 my kernel: Copyright (c) 1992-2011 The FreeBSD Project.
+Aug 30 14:31:39 my kernel: Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+Aug 30 14:31:39 my kernel: The Regents of the University of California. All rights reserved.
+Aug 30 14:31:39 my kernel: FreeBSD is a registered trademark of The FreeBSD Foundation.
+Aug 30 14:31:39 my kernel: FreeBSD 9.0-BETA2 #19 r225237+65bfc47-dirty: Tue Aug 30 14:03:21 UTC 2011
+Aug 30 14:31:39 my kernel: root@my.freebsd:/usr/obj/usr/src/sys/VNET_ABLE i386
+Aug 30 14:31:39 my kernel: WARNING: WITNESS option enabled, expect reduced performance.
+Aug 30 14:31:39 my kernel: CPU: Intel(R) Core(TM)2 Duo CPU     E6750  @ 2.66GHz (2645.56-MHz 686-class CPU)
+Aug 30 14:31:39 my kernel: Origin = "GenuineIntel"  Id = 0x6fb  Family = 6  Model = f  Stepping = 11
+Aug 30 14:31:39 my kernel: Features=0x783fbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,MMX,FXSR,SSE,SSE2>
+Aug 30 14:31:39 my kernel: Features2=0x9<SSE3,MON>
+Aug 30 14:31:39 my kernel: AMD Features=0x20100800<SYSCALL,NX,LM>
+Aug 30 14:31:39 my kernel: AMD Features2=0x1<LAHF>
+Aug 30 14:31:39 my kernel: real memory  = 536805376 (511 MB)
+Aug 30 14:31:39 my kernel: avail memory = 501788672 (478 MB)
+Aug 30 14:31:39 my kernel: WARNING: VIMAGE (virtualized network stack) is a highly experimental feature.
+Aug 30 14:31:39 my kernel: kbd1 at kbdmux0
+Aug 30 14:31:39 my kernel: acpi0: <VBOX VBOXXSDT> on motherboard
+Aug 30 14:31:39 my kernel: acpi0: Power Button (fixed)
+Aug 30 14:31:39 my kernel: acpi0: Sleep Button (fixed)
+Aug 30 14:31:39 my kernel: Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+Aug 30 14:31:39 my kernel: acpi_timer0: <32-bit timer at 3.579545MHz> port 0x4008-0x400b on acpi0
+Aug 30 14:31:39 my kernel: pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+Aug 30 14:31:39 my kernel: pci0: <ACPI PCI bus> on pcib0
+Aug 30 14:31:39 my kernel: isab0: <PCI-ISA bridge> at device 1.0 on pci0
+Aug 30 14:31:39 my kernel: isa0: <ISA bus> on isab0
+Aug 30 14:31:39 my kernel: atapci0: <Intel PIIX4 UDMA33 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0xd000-0xd00f at device 1.1 on pci0
+Aug 30 14:31:39 my kernel: ata0: <ATA channel 0> on atapci0
+Aug 30 14:31:39 my kernel: ata1: <ATA channel 1> on atapci0
+Aug 30 14:31:39 my kernel: vgapci0: <VGA-compatible display> mem 0xe0000000-0xe0ffffff irq 11 at device 2.0 on pci0
+Aug 30 14:31:39 my kernel: em0: <Intel(R) PRO/1000 Legacy Network Connection 1.0.3> port 0xd010-0xd017 mem 0xf0000000-0xf001ffff irq 10 at device 3.0 on pci0
+Aug 30 14:31:39 my kernel: em0: Ethernet address: 08:00:27:91:d7:5b
+Aug 30 14:31:39 my kernel: pci0: <base peripheral> at device 4.0 (no driver attached)
+Aug 30 14:31:39 my kernel: pcm0: <Intel ICH (82801AA)> port 0xd100-0xd1ff,0xd200-0xd23f irq 5 at device 5.0 on pci0
+Aug 30 14:31:39 my kernel: pcm0: <SigmaTel STAC9700/83/84 AC97 Codec>
+Aug 30 14:31:39 my kernel: pci0: <bridge> at device 7.0 (no driver attached)
+Aug 30 14:31:39 my kernel: acpi_acad0: <AC Adapter> on acpi0
+Aug 30 14:31:39 my kernel: atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+Aug 30 14:31:39 my kernel: atkbd0: <AT Keyboard> irq 1 on atkbdc0
+Aug 30 14:31:39 my kernel: kbd0 at atkbd0
+Aug 30 14:31:39 my kernel: atkbd0: [GIANT-LOCKED]
+Aug 30 14:31:39 my kernel: fdc0: <floppy drive controller> port 0x3f0-0x3f5,0x3f7 irq 6 drq 2 on acpi0
+Aug 30 14:31:39 my kernel: fdc0: does not respond
+Aug 30 14:31:39 my kernel: device_attach: fdc0 attach returned 6
+Aug 30 14:31:39 my kernel: driver bug: Unable to set devclass (devname: (null))
+Aug 30 14:31:39 my kernel: psm0: <PS/2 Mouse> irq 12 on atkbdc0
+Aug 30 14:31:39 my kernel: psm0: [GIANT-LOCKED]
+Aug 30 14:31:39 my kernel: psm0: model IntelliMouse Explorer, device ID 4
+Aug 30 14:31:39 my kernel: pmtimer0 on isa0
+Aug 30 14:31:39 my kernel: sc0: <System console> at flags 0x100 on isa0
+Aug 30 14:31:39 my kernel: sc0: VGA <16 virtual consoles, flags=0x300>
+Aug 30 14:31:39 my kernel: vga0: <Generic ISA VGA> at port 0x3c0-0x3df iomem 0xa0000-0xbffff on isa0
+Aug 30 14:31:39 my kernel: atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+Aug 30 14:31:39 my kernel: Event timer "RTC" frequency 32768 Hz quality 0
+Aug 30 14:31:39 my kernel: attimer0: <AT timer> at port 0x40 on isa0
+Aug 30 14:31:39 my kernel: Timecounter "i8254" frequency 1193182 Hz quality 0
+Aug 30 14:31:39 my kernel: Event timer "i8254" frequency 1193182 Hz quality 100
+Aug 30 14:31:39 my kernel: ppc0: parallel port not found.
+Aug 30 14:31:39 my kernel: Timecounters tick every 10.000 msec
+Aug 30 14:31:39 my kernel: pcm0: measured ac97 link rate at 37106 Hz
+Aug 30 14:31:39 my kernel: ada0 at ata0 bus 0 scbus0 target 0 lun 0
+Aug 30 14:31:39 my kernel: ada0: <VBOX HARDDISK 1.0> ATA-6 device
+Aug 30 14:31:39 my kernel: ada0: 33.300MB/s transfers (UDMA2, PIO 65536bytes)
+Aug 30 14:31:39 my kernel: ada0: 40960MB (83886080 512 byte sectors: 16H 63S/T 16383C)
+Aug 30 14:31:39 my kernel: ada0: Previously was known as ad0
+Aug 30 14:31:39 my kernel: cd0 at ata1 bus 0 scbus1 target 0 lun 0
+Aug 30 14:31:39 my kernel: cd0: <VBOX CD-ROM 1.0> Removable CD-ROM SCSI-0 device 
+Aug 30 14:31:39 my kernel: cd0: 33.300MB/s transfers (UDMA2, ATAPI 12bytes, PIO 65534bytes)
+Aug 30 14:31:39 my kernel: cd0: cd present [14565 x 2048 byte records]
+Aug 30 14:31:39 my kernel: Timecounter "TSC" frequency 2645563087 Hz quality 800
+Aug 30 14:31:39 my kernel: WARNING: WITNESS option enabled, expect reduced performance.
+Aug 30 14:31:39 my kernel: Trying to mount root from ufs:/dev/ad0s1a [rw]...
+Aug 30 14:35:01 my login: ROOT LOGIN (root) ON ttyv0
+Aug 30 14:35:06 my kernel: Using visibility wtap plugin...
+Aug 30 14:35:06 my kernel: Loaded wtap wireless simulator
+Aug 30 14:35:13 my kernel: wtap0: ieee80211_radiotap_attach: no tx channel, radiotap 0x0wtap0: ieee80211_radiotap_attach: no rx channel, radiotap 0x0
+Aug 30 14:35:13 my kernel: wtap1: ieee80211_radiotap_attach: no tx channel, radiotap 0x0wtap1: ieee80211_radiotap_attach: no rx channel, radiotap 0x0wtap2: ieee80211_radiotap_attach: no tx channel, radiotap 0x0wtap2: ieee80211_radiotap_attach: no rx channel, radiotap 0x0wtap3: ieee80211_radiotap_attach: no tx channel, radiotap 0x0wtap3: ieee80211_radiotap_attach: no rx channel, radiotap 0x0wlan0: Ethernet address: 00:98:9a:98:96:97
+Aug 30 14:35:13 my kernel: wlan1: Ethernet address: 00:98:9a:98:96:98
+Aug 30 14:35:13 my kernel: wlan2: Ethernet address: 00:98:9a:98:96:99
+Aug 30 14:35:13 my kernel: wlan3: Ethernet address: 00:98:9a:98:96:9a
+Aug 30 14:35:13 my kernel: lock order reversal:
+Aug 30 14:35:13 my kernel: 1st 0xc10ae520 allprison (allprison) @ /usr/src/sys/kern/kern_jail.c:932
+Aug 30 14:35:13 my kernel: 2nd 0xc12280ec vnet_sysinit_sxlock (vnet_sysinit_sxlock) @ /usr/src/sys/net/vnet.c:614
+Aug 30 14:35:13 my kernel: KDB: stack backtrace:
+Aug 30 14:35:13 my kernel: db_trace_self_wrapper(c0f156ac,6b636f6c,20402029,7273752f,6372732f,...) at db_trace_self_wrapper+0x26
+Aug 30 14:35:13 my kernel: kdb_backtrace(c0a430fb,c0f190c7,c3556138,c355a098,c33c8a08,...) at kdb_backtrace+0x2a
+Aug 30 14:35:13 my kernel: _witness_debugger(c0f190c7,c12280ec,c0f283c7,c355a098,c0f2851a,...) at _witness_debugger+0x25
+Aug 30 14:35:13 my kernel: witness_checkorder(c12280ec,1,c0f2851a,266,0,...) at witness_checkorder+0x839
+Aug 30 14:35:13 my kernel: _sx_slock(c12280ec,0,c0f2851a,266,c3c41b80,...) at _sx_slock+0x85
+Aug 30 14:35:13 my kernel: vnet_sysinit(c3c80000,c1070600,5540,c3875828,c1043a98,...) at vnet_sysinit+0x2b
+Aug 30 14:35:13 my kernel: vnet_alloc(c3875828,c0f0cd45,0,10,0,...) at vnet_alloc+0xdf
+Aug 30 14:35:13 my kernel: kern_jail_set(c3c41b80,c35b8800,1,c35b8800,c3c23000,...) at kern_jail_set+0x1968
+Aug 30 14:35:13 my kernel: jail_set(c3c41b80,c33c8cec,c33c8d28,c0f179b5,0,...) at jail_set+0x50
+Aug 30 14:35:13 my kernel: syscallenter(c3c41b80,c33c8ce4,c33c8ce4,0,0,...) at syscallenter+0x263
+Aug 30 14:35:13 my kernel: syscall(c33c8d28) at syscall+0x34
+Aug 30 14:35:13 my kernel: Xint0x80_syscall() at Xint0x80_syscall+0x21
+Aug 30 14:35:13 my kernel: --- syscall (507, FreeBSD ELF32, jail_set), eip = 0x280f18eb, esp = 0xbfbfeaec, ebp = 0xbfbfeb98 ---
+Aug 30 14:35:14 my kernel: wlan0: ieee80211_start: ignore queue, in SCAN state
+Aug 30 14:35:14 my kernel: wlan1: ieee80211_start: ignore queue, in SCAN state
+Aug 30 14:35:14 my kernel: wlan2: ieee80211_start: ignore queue, in SCAN state
+Aug 30 14:35:14 my kernel: wlan3: ieee80211_start: ignore queue, in SCAN state
+Aug 30 14:35:24 my kernel: wlan1: [00:98:9a:98:96:97] peer link: IDLE -> OPEN SENT
+Aug 30 14:35:24 my kernel: wlan1: [00:98:9a:98:96:97] send PEER OPEN action: localid 0xca58
+Aug 30 14:35:24 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:35:24 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:35:24 my kernel: wlan1: [00:98:9a:98:96:97] mesh link timeout, state 1, retry counter 0
+Aug 30 14:35:24 my kernel: wlan1: [00:98:9a:98:96:97] send PEER OPEN action: localid 0xca58
+Aug 30 14:35:24 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:35:24 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:35:24 my kernel: wlan1: [00:98:9a:98:96:97] mesh link timeout, state 1, retry counter 1
+Aug 30 14:35:24 my kernel: wlan1: [00:98:9a:98:96:97] send PEER OPEN action: localid 0xca58
+Aug 30 14:35:24 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:35:24 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:35:24 my kernel: wlan1: [00:98:9a:98:96:97] mesh link timeout, state 1, retry counter 2
+Aug 30 14:35:24 my kernel: wlan1: [00:98:9a:98:96:97] send PEER CLOSE action: localid 0xca58, peerid 0xfd23 reason 6
+Aug 30 14:35:24 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:35:24 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, unknown node
+Aug 30 14:35:24 my kernel: wlan1: [00:98:9a:98:96:97] peer link: OPEN SENT -> HOLDING
+Aug 30 14:35:24 my kernel: wlan1: [00:98:9a:98:96:97] mesh link timeout, state 5, retry counter 0
+Aug 30 14:35:24 my kernel: wlan1: [00:98:9a:98:96:97] peer link: HOLDING -> IDLE
+Aug 30 14:35:25 my kernel: wlan0: [00:98:9a:98:96:98] peer link: IDLE -> OPEN SENT
+Aug 30 14:35:25 my kernel: wlan0: [00:98:9a:98:96:98] send PEER OPEN action: localid 0x4bb9
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] peer link: IDLE -> OPEN SENT
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] send PEER OPEN action: localid 0xc0ab
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:97] recv PEER OPEN, lid 0x4bb9
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:97] peer link: IDLE -> OPEN RECEIVED
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:97] send PEER OPEN action: localid 0x675e
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:97] send PEER CONFIRM action: localid 0x675e, peerid 0x4bb9
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:35:25 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:35:25 my kernel: wlan0: [00:98:9a:98:96:98] recv PEER OPEN, lid 0x675e
+Aug 30 14:35:25 my kernel: wlan0: [00:98:9a:98:96:98] peer link: OPEN SENT -> OPEN RECEIVED
+Aug 30 14:35:25 my kernel: wlan0: [00:98:9a:98:96:98] send PEER CONFIRM action: localid 0x4bb9, peerid 0x675e
+Aug 30 14:35:25 my kernel: wlan0: [00:98:9a:98:96:98] recv PEER CONFIRM, local id 0x675e, peer id 0x4bb9
+Aug 30 14:35:25 my kernel: wlan0: [00:98:9a:98:96:98] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 30 14:35:25 my kernel: wlan0: [00:98:9a:98:96:98] start path discovery (src <none>), target seq 0
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:97] recv PEER CONFIRM, local id 0x4bb9, peer id 0x675e
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:97] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:97] start path discovery (src <none>), target seq 0
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:97] received PREQ, source 00:98:9a:98:96:97
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:97] reply to 00:98:9a:98:96:97
+Aug 30 14:35:25 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:98
+Aug 30 14:35:25 my kernel: wlan0: [00:98:9a:98:96:98] reply to 00:98:9a:98:96:98
+Aug 30 14:35:25 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 30 14:35:25 my kernel: wlan0: [00:98:9a:98:96:98] prefer path to 00:98:9a:98:96:97, hopcount 1:0 metric 0:0
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:97] received PREP from 00:98:9a:98:96:97
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:97] prefer path to 00:98:9a:98:96:98, hopcount 1:0 metric 0:0
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] mesh link timeout, state 1, retry counter 0
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] send PEER OPEN action: localid 0xc0ab
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:35:25 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] mesh link timeout, state 1, retry counter 1
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] send PEER OPEN action: localid 0xc0ab
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:35:25 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] mesh link timeout, state 1, retry counter 2
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] send PEER CLOSE action: localid 0xc0ab, peerid 0xfd23 reason 6
+Aug 30 14:35:25 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:35:25 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, unknown node
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] peer link: OPEN SENT -> HOLDING
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] mesh link timeout, state 5, retry counter 0
+Aug 30 14:35:25 my kernel: wlan2: [00:98:9a:98:96:98] peer link: HOLDING -> IDLE
+Aug 30 14:35:26 my kernel: wlan1: [00:98:9a:98:96:99] peer link: IDLE -> OPEN SENT
+Aug 30 14:35:26 my kernel: wlan1: [00:98:9a:98:96:99] send PEER OPEN action: localid 0x1d24
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] peer link: IDLE -> OPEN SENT
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] send PEER OPEN action: localid 0xbf02
+Aug 30 14:35:26 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:98] recv PEER OPEN, lid 0x1d24
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:98] peer link: IDLE -> OPEN RECEIVED
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:98] send PEER OPEN action: localid 0x7ced
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:98] send PEER CONFIRM action: localid 0x7ced, peerid 0x1d24
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:9a] discard action frame, unknown node
+Aug 30 14:35:26 my kernel: wlan1: [00:98:9a:98:96:99] recv PEER OPEN, lid 0x7ced
+Aug 30 14:35:26 my kernel: wlan1: [00:98:9a:98:96:99] peer link: OPEN SENT -> OPEN RECEIVED
+Aug 30 14:35:26 my kernel: wlan1: [00:98:9a:98:96:99] send PEER CONFIRM action: localid 0x1d24, peerid 0x7ced
+Aug 30 14:35:26 my kernel: wlan1: [00:98:9a:98:96:99] recv PEER CONFIRM, local id 0x7ced, peer id 0x1d24
+Aug 30 14:35:26 my kernel: wlan1: [00:98:9a:98:96:99] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 30 14:35:26 my kernel: wlan1: [00:98:9a:98:96:99] start path discovery (src <none>), target seq 0
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 30 14:35:26 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 30 14:35:26 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:98
+Aug 30 14:35:26 my kernel: wlan0: [00:98:9a:98:96:98] forward PREQ from 00:98:9a:98:96:98
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:98] recv PEER CONFIRM, local id 0x1d24, peer id 0x7ced
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:98] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:98] start path discovery (src <none>), target seq 0
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:98
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:98] reply to 00:98:9a:98:96:98
+Aug 30 14:35:26 my kernel: wlan1: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:99
+Aug 30 14:35:26 my kernel: wlan1: [00:98:9a:98:96:99] reply to 00:98:9a:98:96:99
+Aug 30 14:35:26 my kernel: wlan1: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:99
+Aug 30 14:35:26 my kernel: wlan1: [00:98:9a:98:96:99] prefer path to 00:98:9a:98:96:98, hopcount 1:0 metric 0:0
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 30 14:35:26 my kernel: wlan0: [00:98:9a:98:96:98] discard action frame, not for us
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:98
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:98] prefer path to 00:98:9a:98:96:99, hopcount 1:0 metric 0:0
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] mesh link timeout, state 1, retry counter 0
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] send PEER OPEN action: localid 0xbf02
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:9a] discard action frame, unknown node
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] mesh link timeout, state 1, retry counter 1
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] send PEER OPEN action: localid 0xbf02
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:9a] discard action frame, unknown node
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] mesh link timeout, state 1, retry counter 2
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] send PEER CLOSE action: localid 0xbf02, peerid 0xfd23 reason 6
+Aug 30 14:35:26 my kernel: wlan2: [00:98:9a:98:96:9a] discard action frame, unknown node
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] peer link: OPEN SENT -> HOLDING
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] mesh link timeout, state 5, retry counter 0
+Aug 30 14:35:26 my kernel: wlan3: [00:98:9a:98:96:99] peer link: HOLDING -> IDLE
+Aug 30 14:35:27 my kernel: wlan2: [00:98:9a:98:96:9a] peer link: IDLE -> OPEN SENT
+Aug 30 14:35:27 my kernel: wlan2: [00:98:9a:98:96:9a] send PEER OPEN action: localid 0x34e7
+Aug 30 14:35:27 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 30 14:35:27 my kernel: wlan3: [00:98:9a:98:96:99] recv PEER OPEN, lid 0x34e7
+Aug 30 14:35:27 my kernel: wlan3: [00:98:9a:98:96:99] peer link: IDLE -> OPEN RECEIVED
+Aug 30 14:35:27 my kernel: wlan3: [00:98:9a:98:96:99] send PEER OPEN action: localid 0x65ed
+Aug 30 14:35:27 my kernel: wlan3: [00:98:9a:98:96:99] send PEER CONFIRM action: localid 0x65ed, peerid 0x34e7
+Aug 30 14:35:27 my kernel: wlan2: [00:98:9a:98:96:9a] recv PEER OPEN, lid 0x65ed
+Aug 30 14:35:27 my kernel: wlan2: [00:98:9a:98:96:9a] peer link: OPEN SENT -> OPEN RECEIVED
+Aug 30 14:35:27 my kernel: wlan2: [00:98:9a:98:96:9a] send PEER CONFIRM action: localid 0x34e7, peerid 0x65ed
+Aug 30 14:35:27 my kernel: wlan2: [00:98:9a:98:96:9a] recv PEER CONFIRM, local id 0x65ed, peer id 0x34e7
+Aug 30 14:35:27 my kernel: wlan2: [00:98:9a:98:96:9a] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 30 14:35:27 my kernel: wlan2: [00:98:9a:98:96:9a] start path discovery (src <none>), target seq 0
+Aug 30 14:35:27 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 30 14:35:27 my kernel: wlan1: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:99
+Aug 30 14:35:27 my kernel: wlan1: [00:98:9a:98:96:99] forward PREQ from 00:98:9a:98:96:99
+Aug 30 14:35:27 my kernel: wlan3: [00:98:9a:98:96:99] recv PEER CONFIRM, local id 0x34e7, peer id 0x65ed
+Aug 30 14:35:27 my kernel: wlan3: [00:98:9a:98:96:99] peer link: OPEN RECEIVED -> ESTABLISHED
+Aug 30 14:35:27 my kernel: wlan3: [00:98:9a:98:96:99] start path discovery (src <none>), target seq 0
+Aug 30 14:35:27 my kernel: wlan3: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:99
+Aug 30 14:35:27 my kernel: wlan3: [00:98:9a:98:96:99] reply to 00:98:9a:98:96:99
+Aug 30 14:35:27 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:99
+Aug 30 14:35:27 my kernel: wlan0: [00:98:9a:98:96:98] discard PREQ from 00:98:9a:98:96:99, old seq no 3 <= 3
+Aug 30 14:35:27 my kernel: wlan2: [00:98:9a:98:96:9a] received PREQ, source 00:98:9a:98:96:9a
+Aug 30 14:35:27 my kernel: wlan2: [00:98:9a:98:96:9a] reply to 00:98:9a:98:96:9a
+Aug 30 14:35:27 my kernel: wlan2: [00:98:9a:98:96:9a] received PREP from 00:98:9a:98:96:9a
+Aug 30 14:35:27 my kernel: wlan2: [00:98:9a:98:96:9a] prefer path to 00:98:9a:98:96:99, hopcount 1:0 metric 0:0
+Aug 30 14:35:27 my kernel: wlan1: [00:98:9a:98:96:99] discard action frame, not for us
+Aug 30 14:35:27 my kernel: wlan3: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:99
+Aug 30 14:35:27 my kernel: wlan3: [00:98:9a:98:96:99] prefer path to 00:98:9a:98:96:9a, hopcount 1:0 metric 0:0
+Aug 30 14:35:50 my kernel: wlan0: [00:98:9a:98:96:97] discard data frame, not to me
+Aug 30 14:35:50 my kernel: wlan2: [00:98:9a:98:96:97] add mcast route, mesh seqno 4
+Aug 30 14:35:50 my kernel: wlan3: [00:98:9a:98:96:97] add mcast route, mesh seqno 4
+Aug 30 14:35:50 my kernel: wlan3: [00:98:9a:98:96:97] start path discovery (src 00:98:9a:98:96:9a), target seq 0
+Aug 30 14:35:50 my kernel: wlan3: [00:98:9a:98:96:97] queue frame until path found
+Aug 30 14:35:50 my kernel: wlan2: [00:98:9a:98:96:9a] received PREQ, source 00:98:9a:98:96:9a
+Aug 30 14:35:50 my kernel: wlan2: [00:98:9a:98:96:9a] forward PREQ from 00:98:9a:98:96:9a
+Aug 30 14:35:50 my kernel: wlan1: [00:98:9a:98:96:99] received PREQ, source 00:98:9a:98:96:9a
+Aug 30 14:35:50 my kernel: wlan1: [00:98:9a:98:96:99] forward PREQ from 00:98:9a:98:96:9a
+Aug 30 14:35:50 my kernel: wlan1: [00:98:9a:98:96:99] intermediate reply for PREQ from 00:98:9a:98:96:9a
+Aug 30 14:35:50 my kernel: wlan0: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:9a
+Aug 30 14:35:50 my kernel: wlan0: [00:98:9a:98:96:98] reply to 00:98:9a:98:96:9a
+Aug 30 14:35:50 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 30 14:35:50 my kernel: wlan2: [00:98:9a:98:96:98] received PREQ, source 00:98:9a:98:96:9a
+Aug 30 14:35:50 my kernel: wlan2: [00:98:9a:98:96:98] discard PREQ from 00:98:9a:98:96:9a, old seq no 3 <= 3
+Aug 30 14:35:50 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 30 14:35:50 my kernel: wlan2: [00:98:9a:98:96:98] propagate PREP from 00:98:9a:98:96:97
+Aug 30 14:35:50 my kernel: wlan2: [00:98:9a:98:96:98] update path to 00:98:9a:98:96:9a, hopcount 0:2 metric 0:17018
+Aug 30 14:35:50 my kernel: wlan1: [00:98:9a:98:96:97] received PREP from 00:98:9a:98:96:97
+Aug 30 14:35:50 my kernel: wlan1: [00:98:9a:98:96:97] propagate PREP from 00:98:9a:98:96:97
+Aug 30 14:35:50 my kernel: wlan1: [00:98:9a:98:96:97] discard PREP for 00:98:9a:98:96:97, wrong orig seqno 3 != 1
+Aug 30 14:35:50 my kernel: wlan1: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:97
+Aug 30 14:35:50 my kernel: wlan1: [00:98:9a:98:96:99] discard PREP from 00:98:9a:98:96:97, new metric 34036 > 0
+Aug 30 14:35:50 my kernel: wlan3: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:97
+Aug 30 14:35:50 my kernel: wlan3: [00:98:9a:98:96:99] update path to 00:98:9a:98:96:9a, hopcount 0:3 metric 0:34036
+Aug 30 14:35:50 my kernel: wlan3: [00:98:9a:98:96:99] flush queued frame 0xc382b500 len 42
+Aug 30 14:35:50 my kernel: wlan0: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 30 14:35:50 my kernel: wlan2: [00:98:9a:98:96:98] received PREP from 00:98:9a:98:96:97
+Aug 30 14:35:50 my kernel: wlan2: [00:98:9a:98:96:98] propagate PREP from 00:98:9a:98:96:97
+Aug 30 14:35:50 my kernel: wlan2: [00:98:9a:98:96:98] prefer path to 00:98:9a:98:96:9a, hopcount 3:1 metric 17018:17018
+Aug 30 14:35:50 my kernel: wlan1: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:97
+Aug 30 14:35:50 my kernel: wlan1: [00:98:9a:98:96:99] discard PREP from 00:98:9a:98:96:97, new metric 34036 > 0
+Aug 30 14:35:50 my kernel: wlan3: [00:98:9a:98:96:99] received PREP from 00:98:9a:98:96:97
+Aug 30 14:35:50 my kernel: wlan3: [00:98:9a:98:96:99] prefer path to 00:98:9a:98:96:9a, hopcount 4:2 metric 34036:34036
+Aug 30 14:35:50 my kernel: wlan3: [00:98:9a:98:96:9a] discard data frame, not to me
+Aug 30 14:35:50 my kernel: wlan0: [00:98:9a:98:96:97] discard data frame, not to me
+Aug 30 14:35:50 my kernel: wlan3: [00:98:9a:98:96:9a] discard data frame, not to me

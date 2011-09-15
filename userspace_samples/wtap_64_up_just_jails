@@ -1,0 +1,385 @@
+# ./ioctl c 0
+# ./ioctl c 1
+# ./ioctl c 2
+# ./ioctl c 3
+# ./ioctl c 4
+# ./ioctl c 5
+# ./ioctl c 6
+# ./ioctl c 7
+# ./ioctl c 8
+# ./ioctl c 9
+# ./ioctl c 10
+# ./ioctl c 11
+# ./ioctl c 12
+# ./ioctl c 13
+# ./ioctl c 14
+# ./ioctl c 15
+# ./ioctl c 16
+# ./ioctl c 17
+# ./ioctl c 18
+# ./ioctl c 19
+# ./ioctl c 20
+# ./ioctl c 21
+# ./ioctl c 22
+# ./ioctl c 23
+# ./ioctl c 24
+# ./ioctl c 25
+# ./ioctl c 26
+# ./ioctl c 27
+# ./ioctl c 28
+# ./ioctl c 29
+# ./ioctl c 30
+# ./ioctl c 31
+# ./ioctl c 32
+# ./ioctl c 33
+# ./ioctl c 34
+# ./ioctl c 35
+# ./ioctl c 36
+# ./ioctl c 37
+# ./ioctl c 38
+# ./ioctl c 39
+# ./ioctl c 40
+# ./ioctl c 41
+# ./ioctl c 42
+# ./ioctl c 43
+# ./ioctl c 44
+# ./ioctl c 45
+# ./ioctl c 46
+# ./ioctl c 47
+# ./ioctl c 48
+# ./ioctl c 49
+# ./ioctl c 50
+# ./ioctl c 51
+# ./ioctl c 52
+# ./ioctl c 53
+# ./ioctl c 54
+# ./ioctl c 55
+# ./ioctl c 56
+# ./ioctl c 57
+# ./ioctl c 58
+# ./ioctl c 59
+# ./ioctl c 60
+# ./ioctl c 61
+# ./ioctl c 62
+# ./ioctl c 63
+# ifconfig wlan create wlandev wtap0 wlanmode mesh
+# ifconfig wlan create wlandev wtap1 wlanmode mesh
+# ifconfig wlan create wlandev wtap2 wlanmode mesh
+# ifconfig wlan create wlandev wtap3 wlanmode mesh
+# ifconfig wlan create wlandev wtap4 wlanmode mesh
+# ifconfig wlan create wlandev wtap5 wlanmode mesh
+# ifconfig wlan create wlandev wtap6 wlanmode mesh
+# ifconfig wlan create wlandev wtap7 wlanmode mesh
+# ifconfig wlan create wlandev wtap8 wlanmode mesh
+# ifconfig wlan create wlandev wtap9 wlanmode mesh
+# ifconfig wlan create wlandev wtap10 wlanmode mesh
+# ifconfig wlan create wlandev wtap11 wlanmode mesh
+# ifconfig wlan create wlandev wtap12 wlanmode mesh
+# ifconfig wlan create wlandev wtap13 wlanmode mesh
+# ifconfig wlan create wlandev wtap14 wlanmode mesh
+# ifconfig wlan create wlandev wtap15 wlanmode mesh
+# ifconfig wlan create wlandev wtap16 wlanmode mesh
+# ifconfig wlan create wlandev wtap17 wlanmode mesh
+# ifconfig wlan create wlandev wtap18 wlanmode mesh
+# ifconfig wlan create wlandev wtap19 wlanmode mesh
+# ifconfig wlan create wlandev wtap20 wlanmode mesh
+# ifconfig wlan create wlandev wtap21 wlanmode mesh
+# ifconfig wlan create wlandev wtap22 wlanmode mesh
+# ifconfig wlan create wlandev wtap23 wlanmode mesh
+# ifconfig wlan create wlandev wtap24 wlanmode mesh
+# ifconfig wlan create wlandev wtap25 wlanmode mesh
+# ifconfig wlan create wlandev wtap26 wlanmode mesh
+# ifconfig wlan create wlandev wtap27 wlanmode mesh
+# ifconfig wlan create wlandev wtap28 wlanmode mesh
+# ifconfig wlan create wlandev wtap29 wlanmode mesh
+# ifconfig wlan create wlandev wtap30 wlanmode mesh
+# ifconfig wlan create wlandev wtap31 wlanmode mesh
+# ifconfig wlan create wlandev wtap32 wlanmode mesh
+# ifconfig wlan create wlandev wtap33 wlanmode mesh
+# ifconfig wlan create wlandev wtap34 wlanmode mesh
+# ifconfig wlan create wlandev wtap35 wlanmode mesh
+# ifconfig wlan create wlandev wtap36 wlanmode mesh
+# ifconfig wlan create wlandev wtap37 wlanmode mesh
+# ifconfig wlan create wlandev wtap38 wlanmode mesh
+# ifconfig wlan create wlandev wtap39 wlanmode mesh
+# ifconfig wlan create wlandev wtap40 wlanmode mesh
+# ifconfig wlan create wlandev wtap41 wlanmode mesh
+# ifconfig wlan create wlandev wtap42 wlanmode mesh
+# ifconfig wlan create wlandev wtap43 wlanmode mesh
+# ifconfig wlan create wlandev wtap44 wlanmode mesh
+# ifconfig wlan create wlandev wtap45 wlanmode mesh
+# ifconfig wlan create wlandev wtap46 wlanmode mesh
+# ifconfig wlan create wlandev wtap47 wlanmode mesh
+# ifconfig wlan create wlandev wtap48 wlanmode mesh
+# ifconfig wlan create wlandev wtap49 wlanmode mesh
+# ifconfig wlan create wlandev wtap50 wlanmode mesh
+# ifconfig wlan create wlandev wtap51 wlanmode mesh
+# ifconfig wlan create wlandev wtap52 wlanmode mesh
+# ifconfig wlan create wlandev wtap53 wlanmode mesh
+# ifconfig wlan create wlandev wtap54 wlanmode mesh
+# ifconfig wlan create wlandev wtap55 wlanmode mesh
+# ifconfig wlan create wlandev wtap56 wlanmode mesh
+# ifconfig wlan create wlandev wtap57 wlanmode mesh
+# ifconfig wlan create wlandev wtap58 wlanmode mesh
+# ifconfig wlan create wlandev wtap59 wlanmode mesh
+# ifconfig wlan create wlandev wtap60 wlanmode mesh
+# ifconfig wlan create wlandev wtap61 wlanmode mesh
+# ifconfig wlan create wlandev wtap62 wlanmode mesh
+# ifconfig wlan create wlandev wtap63 wlanmode mesh
+# ifconfig wlan0 hwmprootmode normal
+# ifconfig wlan0 meshid mymesh
+# ifconfig wlan1 meshid mymesh
+# ifconfig wlan2 meshid mymesh
+# ifconfig wlan3 meshid mymesh
+# ifconfig wlan4 meshid mymesh
+# ifconfig wlan5 meshid mymesh
+# ifconfig wlan6 meshid mymesh
+# ifconfig wlan7 meshid mymesh
+# ifconfig wlan8 meshid mymesh
+# ifconfig wlan9 meshid mymesh
+# ifconfig wlan10 meshid mymesh
+# ifconfig wlan11 meshid mymesh
+# ifconfig wlan12 meshid mymesh
+# ifconfig wlan13 meshid mymesh
+# ifconfig wlan14 meshid mymesh
+# ifconfig wlan15 meshid mymesh
+# ifconfig wlan16 meshid mymesh
+# ifconfig wlan17 meshid mymesh
+# ifconfig wlan18 meshid mymesh
+# ifconfig wlan19 meshid mymesh
+# ifconfig wlan20 meshid mymesh
+# ifconfig wlan21 meshid mymesh
+# ifconfig wlan22 meshid mymesh
+# ifconfig wlan23 meshid mymesh
+# ifconfig wlan24 meshid mymesh
+# ifconfig wlan25 meshid mymesh
+# ifconfig wlan26 meshid mymesh
+# ifconfig wlan27 meshid mymesh
+# ifconfig wlan28 meshid mymesh
+# ifconfig wlan29 meshid mymesh
+# ifconfig wlan30 meshid mymesh
+# ifconfig wlan31 meshid mymesh
+# ifconfig wlan32 meshid mymesh
+# ifconfig wlan33 meshid mymesh
+# ifconfig wlan34 meshid mymesh
+# ifconfig wlan35 meshid mymesh
+# ifconfig wlan36 meshid mymesh
+# ifconfig wlan37 meshid mymesh
+# ifconfig wlan38 meshid mymesh
+# ifconfig wlan39 meshid mymesh
+# ifconfig wlan40 meshid mymesh
+# ifconfig wlan41 meshid mymesh
+# ifconfig wlan42 meshid mymesh
+# ifconfig wlan43 meshid mymesh
+# ifconfig wlan44 meshid mymesh
+# ifconfig wlan45 meshid mymesh
+# ifconfig wlan46 meshid mymesh
+# ifconfig wlan47 meshid mymesh
+# ifconfig wlan48 meshid mymesh
+# ifconfig wlan49 meshid mymesh
+# ifconfig wlan50 meshid mymesh
+# ifconfig wlan51 meshid mymesh
+# ifconfig wlan52 meshid mymesh
+# ifconfig wlan53 meshid mymesh
+# ifconfig wlan54 meshid mymesh
+# ifconfig wlan55 meshid mymesh
+# ifconfig wlan56 meshid mymesh
+# ifconfig wlan57 meshid mymesh
+# ifconfig wlan58 meshid mymesh
+# ifconfig wlan59 meshid mymesh
+# ifconfig wlan60 meshid mymesh
+# ifconfig wlan61 meshid mymesh
+# ifconfig wlan62 meshid mymesh
+# ifconfig wlan63 meshid mymesh
+jail -c jid=1 vnet persist
+jail -c jid=2 vnet persist
+jail -c jid=3 vnet persist
+jail -c jid=4 vnet persist
+jail -c jid=5 vnet persist
+jail -c jid=6 vnet persist
+jail -c jid=7 vnet persist
+jail -c jid=8 vnet persist
+jail -c jid=9 vnet persist
+jail -c jid=10 vnet persist
+jail -c jid=11 vnet persist
+jail -c jid=12 vnet persist
+jail -c jid=13 vnet persist
+jail -c jid=14 vnet persist
+jail -c jid=15 vnet persist
+jail -c jid=16 vnet persist
+jail -c jid=17 vnet persist
+jail -c jid=18 vnet persist
+jail -c jid=19 vnet persist
+jail -c jid=20 vnet persist
+jail -c jid=21 vnet persist
+jail -c jid=22 vnet persist
+jail -c jid=23 vnet persist
+jail -c jid=24 vnet persist
+jail -c jid=25 vnet persist
+jail -c jid=26 vnet persist
+jail -c jid=27 vnet persist
+jail -c jid=28 vnet persist
+jail -c jid=29 vnet persist
+jail -c jid=30 vnet persist
+jail -c jid=31 vnet persist
+jail -c jid=32 vnet persist
+jail -c jid=33 vnet persist
+jail -c jid=34 vnet persist
+jail -c jid=35 vnet persist
+jail -c jid=36 vnet persist
+jail -c jid=37 vnet persist
+jail -c jid=38 vnet persist
+jail -c jid=39 vnet persist
+jail -c jid=40 vnet persist
+jail -c jid=41 vnet persist
+jail -c jid=42 vnet persist
+jail -c jid=43 vnet persist
+jail -c jid=44 vnet persist
+jail -c jid=45 vnet persist
+jail -c jid=46 vnet persist
+jail -c jid=47 vnet persist
+jail -c jid=48 vnet persist
+jail -c jid=49 vnet persist
+jail -c jid=50 vnet persist
+jail -c jid=51 vnet persist
+jail -c jid=52 vnet persist
+jail -c jid=53 vnet persist
+jail -c jid=54 vnet persist
+jail -c jid=55 vnet persist
+jail -c jid=56 vnet persist
+jail -c jid=57 vnet persist
+jail -c jid=58 vnet persist
+jail -c jid=59 vnet persist
+jail -c jid=60 vnet persist
+jail -c jid=61 vnet persist
+jail -c jid=62 vnet persist
+jail -c jid=63 vnet persist
+jail -c jid=64 vnet persist
+# ifconfig wlan0 vnet 1
+# ifconfig wlan1 vnet 2
+# ifconfig wlan2 vnet 3
+# ifconfig wlan3 vnet 4
+# ifconfig wlan4 vnet 5
+# ifconfig wlan5 vnet 6
+# ifconfig wlan6 vnet 7
+# ifconfig wlan7 vnet 8
+# ifconfig wlan8 vnet 9
+# ifconfig wlan9 vnet 10
+# ifconfig wlan10 vnet 11
+# ifconfig wlan11 vnet 12
+# ifconfig wlan12 vnet 13
+# ifconfig wlan13 vnet 14
+# ifconfig wlan14 vnet 15
+# ifconfig wlan15 vnet 16
+# ifconfig wlan16 vnet 17
+# ifconfig wlan17 vnet 18
+# ifconfig wlan18 vnet 19
+# ifconfig wlan19 vnet 20
+# ifconfig wlan20 vnet 21
+# ifconfig wlan21 vnet 22
+# ifconfig wlan22 vnet 23
+# ifconfig wlan23 vnet 24
+# ifconfig wlan24 vnet 25
+# ifconfig wlan25 vnet 26
+# ifconfig wlan26 vnet 27
+# ifconfig wlan27 vnet 28
+# ifconfig wlan28 vnet 29
+# ifconfig wlan29 vnet 30
+# ifconfig wlan30 vnet 31
+# ifconfig wlan31 vnet 32
+# ifconfig wlan32 vnet 33
+# ifconfig wlan33 vnet 34
+# ifconfig wlan34 vnet 35
+# ifconfig wlan35 vnet 36
+# ifconfig wlan36 vnet 37
+# ifconfig wlan37 vnet 38
+# ifconfig wlan38 vnet 39
+# ifconfig wlan39 vnet 40
+# ifconfig wlan40 vnet 41
+# ifconfig wlan41 vnet 42
+# ifconfig wlan42 vnet 43
+# ifconfig wlan43 vnet 44
+# ifconfig wlan44 vnet 45
+# ifconfig wlan45 vnet 46
+# ifconfig wlan46 vnet 47
+# ifconfig wlan47 vnet 48
+# ifconfig wlan48 vnet 49
+# ifconfig wlan49 vnet 50
+# ifconfig wlan50 vnet 51
+# ifconfig wlan51 vnet 52
+# ifconfig wlan52 vnet 53
+# ifconfig wlan53 vnet 54
+# ifconfig wlan54 vnet 55
+# ifconfig wlan55 vnet 56
+# ifconfig wlan56 vnet 57
+# ifconfig wlan57 vnet 58
+# ifconfig wlan58 vnet 59
+# ifconfig wlan59 vnet 60
+# ifconfig wlan60 vnet 61
+# ifconfig wlan61 vnet 62
+# ifconfig wlan62 vnet 63
+# ifconfig wlan63 vnet 64
+# jexec 1 ifconfig wlan0 inet 192.168.2.1
+# jexec 2 ifconfig wlan1 inet 192.168.2.2
+# jexec 3 ifconfig wlan2 inet 192.168.2.3
+# jexec 4 ifconfig wlan3 inet 192.168.2.4
+# jexec 5 ifconfig wlan4 inet 192.168.2.5
+# jexec 6 ifconfig wlan5 inet 192.168.2.6
+# jexec 7 ifconfig wlan6 inet 192.168.2.7
+# jexec 8 ifconfig wlan7 inet 192.168.2.8
+# jexec 9 ifconfig wlan8 inet 192.168.2.9
+# jexec 10 ifconfig wlan9 inet 192.168.2.10
+# jexec 11 ifconfig wlan10 inet 192.168.2.11
+# jexec 12 ifconfig wlan11 inet 192.168.2.12
+# jexec 13 ifconfig wlan12 inet 192.168.2.13
+# jexec 14 ifconfig wlan13 inet 192.168.2.14
+# jexec 15 ifconfig wlan14 inet 192.168.2.15
+# jexec 16 ifconfig wlan15 inet 192.168.2.16
+# jexec 17 ifconfig wlan16 inet 192.168.2.17
+# jexec 18 ifconfig wlan17 inet 192.168.2.18
+# jexec 19 ifconfig wlan18 inet 192.168.2.19
+# jexec 20 ifconfig wlan19 inet 192.168.2.20
+# jexec 21 ifconfig wlan20 inet 192.168.2.21
+# jexec 22 ifconfig wlan21 inet 192.168.2.22
+# jexec 23 ifconfig wlan22 inet 192.168.2.23
+# jexec 24 ifconfig wlan23 inet 192.168.2.24
+# jexec 25 ifconfig wlan24 inet 192.168.2.25
+# jexec 26 ifconfig wlan25 inet 192.168.2.26
+# jexec 27 ifconfig wlan26 inet 192.168.2.27
+# jexec 28 ifconfig wlan27 inet 192.168.2.28
+# jexec 29 ifconfig wlan28 inet 192.168.2.29
+# jexec 30 ifconfig wlan29 inet 192.168.2.30
+# jexec 31 ifconfig wlan30 inet 192.168.2.31
+# jexec 32 ifconfig wlan31 inet 192.168.2.32
+# jexec 33 ifconfig wlan32 inet 192.168.2.33
+# jexec 34 ifconfig wlan33 inet 192.168.2.34
+# jexec 35 ifconfig wlan34 inet 192.168.2.35
+# jexec 36 ifconfig wlan35 inet 192.168.2.36
+# jexec 37 ifconfig wlan36 inet 192.168.2.37
+# jexec 38 ifconfig wlan37 inet 192.168.2.38
+# jexec 39 ifconfig wlan38 inet 192.168.2.39
+# jexec 40 ifconfig wlan39 inet 192.168.2.40
+# jexec 41 ifconfig wlan40 inet 192.168.2.41
+# jexec 42 ifconfig wlan41 inet 192.168.2.42
+# jexec 43 ifconfig wlan42 inet 192.168.2.43
+# jexec 44 ifconfig wlan43 inet 192.168.2.44
+# jexec 45 ifconfig wlan44 inet 192.168.2.45
+# jexec 46 ifconfig wlan45 inet 192.168.2.46
+# jexec 47 ifconfig wlan46 inet 192.168.2.47
+# jexec 48 ifconfig wlan47 inet 192.168.2.48
+# jexec 49 ifconfig wlan48 inet 192.168.2.49
+# jexec 50 ifconfig wlan49 inet 192.168.2.50
+# jexec 51 ifconfig wlan50 inet 192.168.2.51
+# jexec 52 ifconfig wlan51 inet 192.168.2.52
+# jexec 53 ifconfig wlan52 inet 192.168.2.53
+# jexec 54 ifconfig wlan53 inet 192.168.2.54
+# jexec 55 ifconfig wlan54 inet 192.168.2.55
+# jexec 56 ifconfig wlan55 inet 192.168.2.56
+# jexec 57 ifconfig wlan56 inet 192.168.2.57
+# jexec 58 ifconfig wlan57 inet 192.168.2.58
+# jexec 59 ifconfig wlan58 inet 192.168.2.59
+# jexec 60 ifconfig wlan59 inet 192.168.2.60
+# jexec 61 ifconfig wlan60 inet 192.168.2.61
+# jexec 62 ifconfig wlan61 inet 192.168.2.62
+# jexec 63 ifconfig wlan62 inet 192.168.2.63
+# jexec 64 ifconfig wlan63 inet 192.168.2.64

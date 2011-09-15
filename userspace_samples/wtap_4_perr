@@ -1,0 +1,5 @@
+jexec 1 ping -c 1 192.168.2.4
+./vis_map d 1 2
+./vis_map d 2 1
+./vis_map d 2 3
+./vis_map d 3 2

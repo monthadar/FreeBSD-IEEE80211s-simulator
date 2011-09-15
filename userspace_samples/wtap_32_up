@@ -1,0 +1,193 @@
+./ioctl c 0
+./ioctl c 1
+./ioctl c 2
+./ioctl c 3
+./ioctl c 4
+./ioctl c 5
+./ioctl c 6
+./ioctl c 7
+./ioctl c 8
+./ioctl c 9
+./ioctl c 10
+./ioctl c 11
+./ioctl c 12
+./ioctl c 13
+./ioctl c 14
+./ioctl c 15
+./ioctl c 16
+./ioctl c 17
+./ioctl c 18
+./ioctl c 19
+./ioctl c 20
+./ioctl c 21
+./ioctl c 22
+./ioctl c 23
+./ioctl c 24
+./ioctl c 25
+./ioctl c 26
+./ioctl c 27
+./ioctl c 28
+./ioctl c 29
+./ioctl c 30
+./ioctl c 31
+ifconfig wlan create wlandev wtap0 wlanmode mesh
+ifconfig wlan create wlandev wtap1 wlanmode mesh
+ifconfig wlan create wlandev wtap2 wlanmode mesh
+ifconfig wlan create wlandev wtap3 wlanmode mesh
+ifconfig wlan create wlandev wtap4 wlanmode mesh
+ifconfig wlan create wlandev wtap5 wlanmode mesh
+ifconfig wlan create wlandev wtap6 wlanmode mesh
+ifconfig wlan create wlandev wtap7 wlanmode mesh
+ifconfig wlan create wlandev wtap8 wlanmode mesh
+ifconfig wlan create wlandev wtap9 wlanmode mesh
+ifconfig wlan create wlandev wtap10 wlanmode mesh
+ifconfig wlan create wlandev wtap11 wlanmode mesh
+ifconfig wlan create wlandev wtap12 wlanmode mesh
+ifconfig wlan create wlandev wtap13 wlanmode mesh
+ifconfig wlan create wlandev wtap14 wlanmode mesh
+ifconfig wlan create wlandev wtap15 wlanmode mesh
+ifconfig wlan create wlandev wtap16 wlanmode mesh
+ifconfig wlan create wlandev wtap17 wlanmode mesh
+ifconfig wlan create wlandev wtap18 wlanmode mesh
+ifconfig wlan create wlandev wtap19 wlanmode mesh
+ifconfig wlan create wlandev wtap20 wlanmode mesh
+ifconfig wlan create wlandev wtap21 wlanmode mesh
+ifconfig wlan create wlandev wtap22 wlanmode mesh
+ifconfig wlan create wlandev wtap23 wlanmode mesh
+ifconfig wlan create wlandev wtap24 wlanmode mesh
+ifconfig wlan create wlandev wtap25 wlanmode mesh
+ifconfig wlan create wlandev wtap26 wlanmode mesh
+ifconfig wlan create wlandev wtap27 wlanmode mesh
+ifconfig wlan create wlandev wtap28 wlanmode mesh
+ifconfig wlan create wlandev wtap29 wlanmode mesh
+ifconfig wlan create wlandev wtap30 wlanmode mesh
+ifconfig wlan create wlandev wtap31 wlanmode mesh
+ifconfig wlan0 hwmprootmode normal
+ifconfig wlan0 meshid mymesh
+ifconfig wlan1 meshid mymesh
+ifconfig wlan2 meshid mymesh
+ifconfig wlan3 meshid mymesh
+ifconfig wlan4 meshid mymesh
+ifconfig wlan5 meshid mymesh
+ifconfig wlan6 meshid mymesh
+ifconfig wlan7 meshid mymesh
+ifconfig wlan8 meshid mymesh
+ifconfig wlan9 meshid mymesh
+ifconfig wlan10 meshid mymesh
+ifconfig wlan11 meshid mymesh
+ifconfig wlan12 meshid mymesh
+ifconfig wlan13 meshid mymesh
+ifconfig wlan14 meshid mymesh
+ifconfig wlan15 meshid mymesh
+ifconfig wlan16 meshid mymesh
+ifconfig wlan17 meshid mymesh
+ifconfig wlan18 meshid mymesh
+ifconfig wlan19 meshid mymesh
+ifconfig wlan20 meshid mymesh
+ifconfig wlan21 meshid mymesh
+ifconfig wlan22 meshid mymesh
+ifconfig wlan23 meshid mymesh
+ifconfig wlan24 meshid mymesh
+ifconfig wlan25 meshid mymesh
+ifconfig wlan26 meshid mymesh
+ifconfig wlan27 meshid mymesh
+ifconfig wlan28 meshid mymesh
+ifconfig wlan29 meshid mymesh
+ifconfig wlan30 meshid mymesh
+ifconfig wlan31 meshid mymesh
+jail -i -c jid=1 vnet persist
+jail -i -c jid=2 vnet persist
+jail -i -c jid=3 vnet persist
+jail -i -c jid=4 vnet persist
+jail -i -c jid=5 vnet persist
+jail -i -c jid=6 vnet persist
+jail -i -c jid=7 vnet persist
+jail -i -c jid=8 vnet persist
+jail -i -c jid=9 vnet persist
+jail -i -c jid=10 vnet persist
+jail -i -c jid=11 vnet persist
+jail -i -c jid=12 vnet persist
+jail -i -c jid=13 vnet persist
+jail -i -c jid=14 vnet persist
+jail -i -c jid=15 vnet persist
+jail -i -c jid=16 vnet persist
+jail -i -c jid=17 vnet persist
+jail -i -c jid=18 vnet persist
+jail -i -c jid=19 vnet persist
+jail -i -c jid=20 vnet persist
+jail -i -c jid=21 vnet persist
+jail -i -c jid=22 vnet persist
+jail -i -c jid=23 vnet persist
+jail -i -c jid=24 vnet persist
+jail -i -c jid=25 vnet persist
+jail -i -c jid=26 vnet persist
+jail -i -c jid=27 vnet persist
+jail -i -c jid=28 vnet persist
+jail -i -c jid=29 vnet persist
+jail -i -c jid=30 vnet persist
+jail -i -c jid=31 vnet persist
+jail -i -c jid=32 vnet persist
+ifconfig wlan0 vnet 1
+ifconfig wlan1 vnet 2
+ifconfig wlan2 vnet 3
+ifconfig wlan3 vnet 4
+ifconfig wlan4 vnet 5
+ifconfig wlan5 vnet 6
+ifconfig wlan6 vnet 7
+ifconfig wlan7 vnet 8
+ifconfig wlan8 vnet 9
+ifconfig wlan9 vnet 10
+ifconfig wlan10 vnet 11
+ifconfig wlan11 vnet 12
+ifconfig wlan12 vnet 13
+ifconfig wlan13 vnet 14
+ifconfig wlan14 vnet 15
+ifconfig wlan15 vnet 16
+ifconfig wlan16 vnet 17
+ifconfig wlan17 vnet 18
+ifconfig wlan18 vnet 19
+ifconfig wlan19 vnet 20
+ifconfig wlan20 vnet 21
+ifconfig wlan21 vnet 22
+ifconfig wlan22 vnet 23
+ifconfig wlan23 vnet 24
+ifconfig wlan24 vnet 25
+ifconfig wlan25 vnet 26
+ifconfig wlan26 vnet 27
+ifconfig wlan27 vnet 28
+ifconfig wlan28 vnet 29
+ifconfig wlan29 vnet 30
+ifconfig wlan30 vnet 31
+ifconfig wlan31 vnet 32
+jexec 1 ifconfig wlan0 inet 192.168.2.1
+jexec 2 ifconfig wlan1 inet 192.168.2.2
+jexec 3 ifconfig wlan2 inet 192.168.2.3
+jexec 4 ifconfig wlan3 inet 192.168.2.4
+jexec 5 ifconfig wlan4 inet 192.168.2.5
+jexec 6 ifconfig wlan5 inet 192.168.2.6
+jexec 7 ifconfig wlan6 inet 192.168.2.7
+jexec 8 ifconfig wlan7 inet 192.168.2.8
+jexec 9 ifconfig wlan8 inet 192.168.2.9
+jexec 10 ifconfig wlan9 inet 192.168.2.10
+jexec 11 ifconfig wlan10 inet 192.168.2.11
+jexec 12 ifconfig wlan11 inet 192.168.2.12
+jexec 13 ifconfig wlan12 inet 192.168.2.13
+jexec 14 ifconfig wlan13 inet 192.168.2.14
+jexec 15 ifconfig wlan14 inet 192.168.2.15
+jexec 16 ifconfig wlan15 inet 192.168.2.16
+jexec 17 ifconfig wlan16 inet 192.168.2.17
+jexec 18 ifconfig wlan17 inet 192.168.2.18
+jexec 19 ifconfig wlan18 inet 192.168.2.19
+jexec 20 ifconfig wlan19 inet 192.168.2.20
+jexec 21 ifconfig wlan20 inet 192.168.2.21
+jexec 22 ifconfig wlan21 inet 192.168.2.22
+jexec 23 ifconfig wlan22 inet 192.168.2.23
+jexec 24 ifconfig wlan23 inet 192.168.2.24
+jexec 25 ifconfig wlan24 inet 192.168.2.25
+jexec 26 ifconfig wlan25 inet 192.168.2.26
+jexec 27 ifconfig wlan26 inet 192.168.2.27
+jexec 28 ifconfig wlan27 inet 192.168.2.28
+jexec 29 ifconfig wlan28 inet 192.168.2.29
+jexec 30 ifconfig wlan29 inet 192.168.2.30
+jexec 31 ifconfig wlan30 inet 192.168.2.31
+jexec 32 ifconfig wlan31 inet 192.168.2.32

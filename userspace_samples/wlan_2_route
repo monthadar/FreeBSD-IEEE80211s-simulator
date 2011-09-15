@@ -1,0 +1,14 @@
+#./ioctl c 0
+#./ioctl c 1
+#ifconfig wlan create wlandev wtap0 wlanmode mesh
+#ifconfig wlan create wlandev wtap1 wlanmode mesh
+#wlandebug -i wlan0 +mesh+hwmp+input+scan+state+debug+output
+#wlandebug -i wlan1 +mesh+hwmp+input+scan+state+debug+output
+#ifconfig wlan0 meshid mymesh
+#ifconfig wlan1 meshid mymesh
+#ifconfig wlan0 inet 192.168.2.9
+#ifconfig wlan1 inet 192.168.2.19
+route del 192.168.2.9
+route del 192.168.2.19
+route add 192.168.2.9 -iface wlan1
+route add 192.168.2.19 -iface wlan0

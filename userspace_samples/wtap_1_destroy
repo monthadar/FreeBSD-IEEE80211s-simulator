@@ -1,0 +1,3 @@
+ifconfig wlan0 destroy
+./ioctl d 0
+

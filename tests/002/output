@@ -1,0 +1,4 @@
+PING 192.168.2.4 (192.168.2.4): 56 data bytes
+
+--- 192.168.2.4 ping statistics ---
+1 packets transmitted, 0 packets received, 100.0% packet loss

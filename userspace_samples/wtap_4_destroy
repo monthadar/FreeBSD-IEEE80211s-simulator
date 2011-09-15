@@ -1,0 +1,8 @@
+ifconfig wlan0 destroy
+ifconfig wlan1 destroy
+ifconfig wlan2 destroy
+ifconfig wlan3 destroy
+./ioctl d 0
+./ioctl d 1
+./ioctl d 2
+./ioctl d 3

@@ -1,0 +1,49 @@
+./ioctl c 0
+./ioctl c 1
+./ioctl c 2
+./ioctl c 3
+./ioctl c 4
+./ioctl c 5
+./ioctl c 6
+./ioctl c 7
+ifconfig wlan create wlandev wtap0 wlanmode mesh
+ifconfig wlan create wlandev wtap1 wlanmode mesh
+ifconfig wlan create wlandev wtap2 wlanmode mesh
+ifconfig wlan create wlandev wtap3 wlanmode mesh
+ifconfig wlan create wlandev wtap4 wlanmode mesh
+ifconfig wlan create wlandev wtap5 wlanmode mesh
+ifconfig wlan create wlandev wtap6 wlanmode mesh
+ifconfig wlan create wlandev wtap7 wlanmode mesh
+ifconfig wlan0 hwmprootmode normal
+ifconfig wlan0 meshid mymesh
+ifconfig wlan1 meshid mymesh
+ifconfig wlan2 meshid mymesh
+ifconfig wlan3 meshid mymesh
+ifconfig wlan4 meshid mymesh
+ifconfig wlan5 meshid mymesh
+ifconfig wlan6 meshid mymesh
+ifconfig wlan7 meshid mymesh
+jail -c jid=1 vnet persist
+jail -c jid=2 vnet persist
+jail -c jid=3 vnet persist
+jail -c jid=4 vnet persist
+jail -c jid=5 vnet persist
+jail -c jid=6 vnet persist
+jail -c jid=7 vnet persist
+jail -c jid=8 vnet persist
+ifconfig wlan0 vnet 1
+ifconfig wlan1 vnet 2
+ifconfig wlan2 vnet 3
+ifconfig wlan3 vnet 4
+ifconfig wlan4 vnet 5
+ifconfig wlan5 vnet 6
+ifconfig wlan6 vnet 7
+ifconfig wlan7 vnet 8
+jexec 1 ifconfig wlan0 inet 192.168.2.1
+jexec 2 ifconfig wlan1 inet 192.168.2.2
+jexec 3 ifconfig wlan2 inet 192.168.2.3
+jexec 4 ifconfig wlan3 inet 192.168.2.4
+jexec 5 ifconfig wlan4 inet 192.168.2.5
+jexec 6 ifconfig wlan5 inet 192.168.2.6
+jexec 7 ifconfig wlan6 inet 192.168.2.7
+jexec 8 ifconfig wlan7 inet 192.168.2.8

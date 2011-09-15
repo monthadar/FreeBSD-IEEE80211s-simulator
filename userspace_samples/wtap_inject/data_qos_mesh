@@ -1,0 +1,12 @@
+3addrqos
+88:02 :frame control QOS DATA
+00:00 :duration 0
+AA:EF:DF:3e:34:12 :Addr1
+AA:EE:EE:EE:EE:EE :Addr2
+AA:CC:CC:CC:CC:CC :Addr3
+00:00 :seq 0
+01:00 : QoS control
+mesh_ae00
+ff : mesh control flags
+22 : mesh control TTL
+11:44:66:88 : mesh control seq

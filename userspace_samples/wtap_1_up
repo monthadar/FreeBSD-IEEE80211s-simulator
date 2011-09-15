@@ -1,0 +1,5 @@
+./ioctl c 0
+ifconfig wlan create wlandev wtap0 wlanmode mesh
+wlandebug -i wlan0 hwmp+mesh+output+input+inact
+ifconfig wlan0 meshid mymesh
+ifconfig wlan0 inet 192.168.2.1

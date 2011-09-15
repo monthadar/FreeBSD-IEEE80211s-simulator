@@ -1,0 +1,6 @@
+jexec 1 ifconfig wlan0 destroy
+jexec 2 ifconfig wlan1 destroy
+jexec 3 ifconfig wlan2 destroy
+./ioctl d 0
+./ioctl d 1
+./ioctl d 2
