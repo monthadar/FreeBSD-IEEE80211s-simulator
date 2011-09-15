@@ -1,0 +1,46 @@
+FreeBSD IEEE80211s Simulator 2011-09-15
+
+WHAT IS FreeBSD IEEE80211s Simulator?
+
+    It is a kernel module that creates faked wifi-devices.
+    This makes it easy to debug and test the Net80211 stack.
+    It is ment to test the upper layers of the stack.
+    It DOES not simulate the physical level at all. i.e.
+    no collisions or other physical phenomena.
+
+ON WHAT HARDWARE DOES IT RUN?
+
+   Any hardware running FreeBSD Current with VIMAGE option.
+   Also on VirtualBox!
+
+DOCUMENTATION:
+
+   As of this realse documentation is course. Bear with us!
+ 
+CONFIGURING the FreeBSD IEEE80211s Simulator:
+
+   In the kernel configuration file of your choice (e.g. GENERIC on x86) add:
+
+       options	VIMAGE
+
+COMPILING & INSTALLING the FreeBSD IEEE80211s Simulator:
+
+   The following command compiles and loads the module to the kernel
+
+        make load
+
+   To unload:
+
+        make unload
+
+IF SOMETHING GOES WRONG:
+
+   Contact me on monthadar@gmail.com
+
+Running a ping test:
+
+   cd PATH_TO_CODE/userspace_samples/
+   ./wtap_2_up
+   **wait a moment**
+   jexec 1 ping -c 1 192.168.2.2
+   ./wtap_2_destroy
