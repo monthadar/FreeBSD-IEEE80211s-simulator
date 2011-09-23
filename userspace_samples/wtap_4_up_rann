@@ -1,0 +1,38 @@
+./ioctl c 0
+./ioctl c 1
+./ioctl c 2
+./ioctl c 3
+ifconfig wlan create wlandev wtap0 wlanmode mesh
+ifconfig wlan create wlandev wtap1 wlanmode mesh
+ifconfig wlan create wlandev wtap2 wlanmode mesh
+ifconfig wlan create wlandev wtap3 wlanmode mesh
+ifconfig wlan0 hwmprootmode rann
+wlandebug -i wlan0 hwmp+mesh+output+input
+wlandebug -i wlan1 hwmp+mesh+output+input
+wlandebug -i wlan2 hwmp+mesh+output+input
+wlandebug -i wlan3 hwmp+mesh+output+input
+ifconfig wlan0 meshid mymesh
+ifconfig wlan1 meshid mymesh
+ifconfig wlan2 meshid mymesh
+ifconfig wlan3 meshid mymesh
+jail -c jid=1 vnet persist
+jail -c jid=2 vnet persist
+jail -c jid=3 vnet persist
+jail -c jid=4 vnet persist
+ifconfig wlan0 vnet 1
+ifconfig wlan1 vnet 2
+ifconfig wlan2 vnet 3
+ifconfig wlan3 vnet 4
+jexec 1 ifconfig wlan0 inet 192.168.2.1
+jexec 2 ifconfig wlan1 inet 192.168.2.2
+jexec 3 ifconfig wlan2 inet 192.168.2.3
+jexec 4 ifconfig wlan3 inet 192.168.2.4
+
+
+./vis_map a 0 1
+./vis_map a 1 0
+./vis_map a 1 2
+./vis_map a 2 1
+./vis_map a 2 3
+./vis_map a 3 2
+./vis_map o
