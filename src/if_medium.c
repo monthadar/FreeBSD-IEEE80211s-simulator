@@ -104,6 +104,7 @@ medium_get_next_packet(struct wtap_medium *md)
 void
 medium_open(struct wtap_medium *md)
 {
+
 	mtx_lock(&md->md_mtx);
 	md->open = 1;
 	mtx_unlock(&md->md_mtx);
@@ -112,6 +113,7 @@ medium_open(struct wtap_medium *md)
 void
 medium_close(struct wtap_medium *md)
 {
+
 	mtx_lock(&md->md_mtx);
 	md->open = 0;
 	mtx_unlock(&md->md_mtx);
