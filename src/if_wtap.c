@@ -42,12 +42,11 @@
 
 /* device for IOCTL and read/write for debuggin purposes */
 /* Function prototypes */
-static d_open_t      	wtap_node_open;
-static d_close_t	wtap_node_close;
-static d_write_t	wtap_node_write;
-static d_ioctl_t	wtap_node_ioctl;
+static	d_open_t	wtap_node_open;
+static	d_close_t	wtap_node_close;
+static	d_write_t	wtap_node_write;
+static	d_ioctl_t	wtap_node_ioctl;
 
-//static struct cdev *sdev;
 static struct cdevsw wtap_cdevsw = {
 	.d_version =	D_VERSION,
 	.d_flags =	0,
@@ -61,8 +60,8 @@ static struct cdevsw wtap_cdevsw = {
 static int
 wtap_node_open(struct cdev *dev, int oflags, int devtype, struct thread *p)
 {
-	int err = 0;
 
+	int err = 0;
 	uprintf("Opened device \"echo\" successfully.\n");
 	return(err);
 }
@@ -96,14 +95,15 @@ wtap_node_write(struct cdev *dev, struct uio *uio, int ioflag)
 
 	MGETHDR(m, M_DONTWAIT, MT_DATA);
 	m_copyback(m, 0, buf_len, buf);
-	
+
 	CURVNET_SET(TD_TO_VNET(curthread));
 	IFNET_RLOCK_NOSLEEP();
 
 	TAILQ_FOREACH(ifp, &V_ifnet, if_link) {
 		printf("ifp->if_xname = %s\n", ifp->if_xname);
 		if(strcmp(dev->si_name, ifp->if_xname) == 0){
-			printf("found match, correspoding wtap = %s\n", ifp->if_xname);
+			printf("found match, correspoding wtap = %s\n",
+			    ifp->if_xname);
 			sc = (struct wtap_softc *)ifp->if_softc;
 			printf("wtap id = %d\n", sc->id);
 			wtap_inject(sc, m);
@@ -136,12 +136,14 @@ static int wtap_raw_xmit(struct ieee80211_node *ni, struct mbuf *m,
 static int
 wtap_medium_enqueue(struct wtap_vap *avp, struct mbuf *m)
 {
+
 	return medium_transmit(avp->av_md, avp->id, m);
 }
 
 static int
 wtap_media_change(struct ifnet *ifp)
 {
+
 	DWTAP_PRINTF("%s\n", __func__);
 	int error = ieee80211_media_change(ifp);
 	/* NB: only the fixed rate can change and that doesn't need a reset */
@@ -235,9 +237,9 @@ wtap_beacon_intrp(void *arg)
 		printf("%s, need to remap the memory because the beacon frame"
 		    " changed size.\n",__func__);
 	}
-	
+
 	if (ieee80211_radiotap_active_vap(vap))
-		ieee80211_radiotap_tx(vap, m);
+	    ieee80211_radiotap_tx(vap, m);
 
 #if 0
 	medium_transmit(avp->av_md, avp->id, m);
@@ -331,7 +333,7 @@ wtap_vap_create(struct ieee80211com *ic, const char name[IFNAMSIZ],
 	ieee80211_vap_attach(vap, wtap_media_change, ieee80211_media_status);
 	avp->av_dev = make_dev(&wtap_cdevsw, 0, UID_ROOT, GID_WHEEL, 0600,
 	    (const char *)ic->ic_ifp->if_xname);
-	
+
 	/* TODO this is a hack to force it to choose the rate we want */
 	vap->iv_bss->ni_txrate = 130;
 	return vap;
@@ -341,6 +343,7 @@ static void
 wtap_vap_delete(struct ieee80211vap *vap)
 {
 	struct wtap_vap *avp = WTAP_VAP(vap);
+
 	DWTAP_PRINTF("%s\n", __func__);
 	destroy_dev(avp->av_dev);
 	callout_stop(&avp->av_swba);
@@ -348,6 +351,11 @@ wtap_vap_delete(struct ieee80211vap *vap)
 	free((struct wtap_vap*) vap, M_80211_VAP);
 }
 
+/* NB: This function is not used.
+ * I had the problem of the queue
+ * being empty all the time.
+ * Maybe I am setting the queue wrong?
+ */
 static void
 wtap_start(struct ifnet *ifp)
 {
@@ -363,9 +371,14 @@ wtap_start(struct ifnet *ifp)
 		return;
 	for (;;) {
 		if(IFQ_IS_EMPTY(&ifp->if_snd)){
-		    printf("queue empty, just trying to see if the other queue is empty\n");
-		    //printf("queue for id=1, %u\n", IFQ_IS_EMPTY(&global_mscs[1]->ifp->if_snd));
-		    //printf("queue for id=0, %u\n", IFQ_IS_EMPTY(&global_mscs[0]->ifp->if_snd));
+		    printf("queue empty, just trying to see "
+		        "if the other queue is empty\n");
+#if 0
+		    printf("queue for id=1, %u\n",
+		        IFQ_IS_EMPTY(&global_mscs[1]->ifp->if_snd));
+		    printf("queue for id=0, %u\n",
+		        IFQ_IS_EMPTY(&global_mscs[0]->ifp->if_snd));
+#endif
 		    break;
 		}
 		IFQ_DEQUEUE(&ifp->if_snd, m);
@@ -380,7 +393,9 @@ wtap_start(struct ifnet *ifp)
 		 * buffers to send all the fragments so all
 		 * go out or none...
 		 */
-		//STAILQ_INIT(&frags);
+#if 0
+		STAILQ_INIT(&frags);
+#endif
 		if ((m->m_flags & M_FRAG)){
 			printf("dont support frags\n");
 			ifp->if_oerrors++;
@@ -398,32 +413,34 @@ wtap_start(struct ifnet *ifp)
 static int
 wtap_ioctl(struct ifnet *ifp, u_long cmd, caddr_t data)
 {
-	//DWTAP_PRINTF("%s\n", __func__);
-	//uprintf("%s, command %lu\n", __func__, cmd);
+#if 0
+	DWTAP_PRINTF("%s\n", __func__);
+	uprintf("%s, command %lu\n", __func__, cmd);
+#endif
 #define	IS_RUNNING(ifp) \
 	((ifp->if_flags & IFF_UP) && (ifp->if_drv_flags & IFF_DRV_RUNNING))
-	//struct ath_softc *sc = ifp->if_softc;
 	struct ieee80211com *ic = ifp->if_l2com;
 	struct wtap_softc *sc = ifp->if_softc;
 	struct ifreq *ifr = (struct ifreq *)data;
-	//const HAL_RATE_TABLE *rt;
 	int error = 0;
 
 	switch (cmd) {
 	case SIOCSIFFLAGS:
 		//printf("%s: %s\n", __func__, "SIOCSIFFLAGS");
-		//ATH_LOCK(sc);
 		if (IS_RUNNING(ifp)) {
 			DWTAP_PRINTF("running\n");
+#if 0
 			/*
 			 * To avoid rescanning another access point,
 			 * do not call ath_init() here.  Instead,
 			 * only reflect promisc mode settings.
 			 */
 			//ath_mode_init(sc);
-		} else if (ifp->if_flags & IFF_UP) {
+#endif
+			} else if (ifp->if_flags & IFF_UP) {
 			DWTAP_PRINTF("up\n");
 			sc->up = 1;
+#if 0
 			/*
 			 * Beware of being called during attach/detach
 			 * to reset promiscuous mode.  In that case we
@@ -435,39 +452,36 @@ wtap_ioctl(struct ifnet *ifp, u_long cmd, caddr_t data)
 			 */
 			//if (!sc->sc_invalid)
 			//	ath_init(sc);	/* XXX lose error */
+#endif
 			ifp->if_drv_flags |= IFF_DRV_RUNNING;
 			ieee80211_start_all(ic);
 		} else {
 			DWTAP_PRINTF("stoping\n");
-// 			ath_stop_locked(ifp);
-// #ifdef notyet
-// 			/* XXX must wakeup in places like ath_vap_delete */
-// 			if (!sc->sc_invalid)
-// 				ath_hal_setpower(sc->sc_ah, HAL_PM_FULL_SLEEP);
-// #endif
+#if 0
+			ath_stop_locked(ifp);
+#ifdef notyet
+			/* XXX must wakeup in places like ath_vap_delete */
+			if (!sc->sc_invalid)
+				ath_hal_setpower(sc->sc_ah, HAL_PM_FULL_SLEEP);
+#endif
+#endif
 		}
-		//ATH_UNLOCK(sc);
 		break;
 	case SIOCGIFMEDIA:
 	case SIOCSIFMEDIA:
-		//DWTAP_PRINTF("%s: %s\n", __func__, "SIOCGIFMEDIA|SIOCSIFMEDIA");
+#if 0
+		DWTAP_PRINTF("%s: %s\n", __func__, "SIOCGIFMEDIA|SIOCSIFMEDIA");
+#endif
 		error = ifmedia_ioctl(ifp, ifr, &ic->ic_media, cmd);
 		break;
 	case SIOCGIFADDR:
-		//DWTAP_PRINTF("%s: %s\n", __func__, "SIOCGIFADDR");
+#if 0
+		DWTAP_PRINTF("%s: %s\n", __func__, "SIOCGIFADDR");
+#endif
 		error = ether_ioctl(ifp, cmd, data);
 		break;
-	case SIOCGATHSTATS:
-		//DWTAP_PRINTF("%s: %s\n", __func__, "SIOCGATHSTATS");
-		break;
-	case SIOCZATHSTATS:
-		//DWTAP_PRINTF("%s: %s\n", __func__, "SIOCZATHSTATS");
-		break;
-	/*case SIOCGATHDIAG:
-		DWTAP_PRINTF("%s: %s\n", __func__, "SIOCGATHDIAG");
-		break;*/
 	default:
-		//DWTAP_PRINTF("%s: %s [%lu]\n", __func__, "EINVAL", cmd);
+		DWTAP_PRINTF("%s: %s [%lu]\n", __func__, "EINVAL", cmd);
 		error = EINVAL;
 		break;
 	}
@@ -475,37 +489,48 @@ wtap_ioctl(struct ifnet *ifp, u_long cmd, caddr_t data)
 #undef IS_RUNNING
 }
 
-static void wtap_init(void *arg){
+static void
+wtap_init(void *arg){
+
 	DWTAP_PRINTF("%s\n", __func__);
 }
 
 static void
 wtap_scan_start(struct ieee80211com *ic)
-{//DWTAP_PRINTF("%s\n", __func__);
+{
+
+#if 0
+	DWTAP_PRINTF("%s\n", __func__);
+#endif
 }
 
 static void
 wtap_scan_end(struct ieee80211com *ic)
-{//DWTAP_PRINTF("%s\n", __func__);
+{
+
+#if 0
+	DWTAP_PRINTF("%s\n", __func__);
+#endif
 }
 
 static void
 wtap_set_channel(struct ieee80211com *ic)
-{//DWTAP_PRINTF("%s\n", __func__);
+{
+
+#if 0
+	DWTAP_PRINTF("%s\n", __func__);
+#endif
 }
 
 static int
 wtap_raw_xmit(struct ieee80211_node *ni, struct mbuf *m,
 	const struct ieee80211_bpf_params *params)
 {
-	//DWTAP_PRINTF("%s\n", __func__);
-	//DWTAP_PRINTF("%s, %p\n", __func__, m);
- 	struct ieee80211vap	*vap = ni->ni_vap;
+#if 0
+	DWTAP_PRINTF("%s, %p\n", __func__, m);
+#endif
+	struct ieee80211vap	*vap = ni->ni_vap;
 	struct wtap_vap 	*avp = WTAP_VAP(vap);
- 	//struct ieee80211com	*ic  = vap->iv_ic;
- 	//struct ifnet		*ifp = ic->ic_ifp;
- 	//struct wtap_softc 	*sc  = ifp->if_softc;
-	//struct wtap_medium	*md  = sc->sc_md; 
 
 	if (ieee80211_radiotap_active_vap(vap)) {
 		ieee80211_radiotap_tx(vap, m);
@@ -513,22 +538,22 @@ wtap_raw_xmit(struct ieee80211_node *ni, struct mbuf *m,
 	if (m->m_flags & M_TXCB)
 		ieee80211_process_callback(ni, m, 0);
 	ieee80211_free_node(ni);
-	//return medium_transmit(md, sc->id, m); // hal frees the mbuf
 	return wtap_medium_enqueue(avp, m);
 }
 
 void
 wtap_inject(struct wtap_softc *sc, struct mbuf *m)
 {
-      struct wtap_buf *bf = (struct wtap_buf *)malloc(sizeof(struct wtap_buf), M_WTAP_RXBUF, M_NOWAIT | M_ZERO);
+      struct wtap_buf *bf = (struct wtap_buf *)malloc(sizeof(struct wtap_buf),
+          M_WTAP_RXBUF, M_NOWAIT | M_ZERO);
       KASSERT(bf != NULL, ("could not allocated a new wtap_buf\n"));
       bf->m = m;
-      
+
       mtx_lock(&sc->sc_mtx);
       STAILQ_INSERT_TAIL(&sc->sc_rxbuf, bf, bf_list);
       taskqueue_enqueue(sc->sc_tq, &sc->sc_rxtask);
       mtx_unlock(&sc->sc_mtx);
-}   
+}
 
 void
 wtap_rx_deliver(struct wtap_softc *sc, struct mbuf *m)
@@ -537,8 +562,10 @@ wtap_rx_deliver(struct wtap_softc *sc, struct mbuf *m)
 	struct ieee80211com *ic = ifp->if_l2com;
 	struct ieee80211_node *ni;
 	int type;
-	//DWTAP_PRINTF("%s\n", __func__);
-	
+#if 0
+	DWTAP_PRINTF("%s\n", __func__);
+#endif
+
 	DWTAP_PRINTF("[%d] receiving m=%p\n", sc->id, m);
 	if (m == NULL) {		/* NB: shouldn't happen */
 		if_printf(ifp, "%s: no mbuf!\n", __func__);
@@ -554,12 +581,11 @@ wtap_rx_deliver(struct wtap_softc *sc, struct mbuf *m)
 	  * for its use.
 	  */
 	ni = ieee80211_find_rxnode_withkey(ic,
-		mtod(m, const struct ieee80211_frame_min *),IEEE80211_KEYIX_NONE);
-	//sc->sc_lastrs = rs;
+	    mtod(m, const struct ieee80211_frame_min *),IEEE80211_KEYIX_NONE);
 	if (ni != NULL) {
 		/*
-		  * Sending station is known, dispatch directly.
-		  */
+		 * Sending station is known, dispatch directly.
+		 */
 		type = ieee80211_input(ni, m, 1<<7, 10);
 		ieee80211_free_node(ni);
 	} else {
@@ -582,7 +608,6 @@ wtap_rx_proc(void *arg, int npending)
 	DWTAP_PRINTF("%s\n", __func__);
 #endif
 
-	
 	for(;;) {
 		mtx_lock(&sc->sc_mtx);
 		bf = STAILQ_FIRST(&sc->sc_rxbuf);
@@ -612,20 +637,26 @@ wtap_rx_proc(void *arg, int npending)
 		 * for its use.
 		 */
 		ni = ieee80211_find_rxnode_withkey(ic,
-		    mtod(m, const struct ieee80211_frame_min *),IEEE80211_KEYIX_NONE);
-	  //sc->sc_lastrs = rs;
-	  if (ni != NULL) {
-		  /*
-		    * Sending station is known, dispatch directly.
-		    */
-		  //ieee80211_radiotap_rx(ni->ni_vap, m);
-		  type = ieee80211_input(ni, m, 1<<7, 10);
-		  ieee80211_free_node(ni);
-	  } else {
-		  //ieee80211_radiotap_rx_all(ic, m);
-		  type = ieee80211_input_all(ic, m, 1<<7, 10);
-	  }
-	  free(bf, M_WTAP_RXBUF); //the mbufs are freed by the Net80211 stack
+		    mtod(m, const struct ieee80211_frame_min *),
+		    IEEE80211_KEYIX_NONE);
+		if (ni != NULL) {
+			/*
+			 * Sending station is known, dispatch directly.
+			 */
+#if 0
+			ieee80211_radiotap_rx(ni->ni_vap, m);
+#endif
+			type = ieee80211_input(ni, m, 1<<7, 10);
+			ieee80211_free_node(ni);
+		} else {
+#if 0
+			ieee80211_radiotap_rx_all(ic, m);
+#endif
+			type = ieee80211_input_all(ic, m, 1<<7, 10);
+		}
+		
+		/* The mbufs are freed by the Net80211 stack */
+		free(bf, M_WTAP_RXBUF);
 	}
 }
 
@@ -662,27 +693,23 @@ wtap_update_promisc(struct ifnet *ifp)
 }
 
 static int
-wtap_if_transmit(struct ifnet *ifp, struct mbuf *m){
-    //struct ieee80211com 	*ic = ifp->if_l2com;
-    //struct ifnet 		*parent = ic->ic_ifp;
-    //struct wtap_softc 		*sc = parent->if_softc;
-    //struct wtap_medium		*md  = sc->sc_md;
-	struct ieee80211_node 	*ni = (struct ieee80211_node *) m->m_pkthdr.rcvif;
-	struct ieee80211vap 	*vap = ni->ni_vap;
-	struct wtap_vap 		*avp = WTAP_VAP(vap);
+wtap_if_transmit(struct ifnet *ifp, struct mbuf *m)
+{
+	struct ieee80211_node *ni =
+	    (struct ieee80211_node *) m->m_pkthdr.rcvif;
+	struct ieee80211vap *vap = ni->ni_vap;
+	struct wtap_vap *avp = WTAP_VAP(vap);
 
 	if(ni == NULL){
-	printf("m->m_pkthdr.rcvif is NULL we cant radiotap_tx\n");    
-    }else{
-	if (ieee80211_radiotap_active_vap(vap)) {
-	    ieee80211_radiotap_tx(vap, m);
-        } 
-    }
-    if (m->m_flags & M_TXCB)
-	ieee80211_process_callback(ni, m, 0);
-    ieee80211_free_node(ni);
-    //return medium_transmit(md, sc->id, m); // hal frees the mbuf
-    return wtap_medium_enqueue(avp, m);
+		printf("m->m_pkthdr.rcvif is NULL we cant radiotap_tx\n");
+	}else{
+		if (ieee80211_radiotap_active_vap(vap))
+			ieee80211_radiotap_tx(vap, m);
+	}
+	if (m->m_flags & M_TXCB)
+		ieee80211_process_callback(ni, m, 0);
+	ieee80211_free_node(ni);
+	return wtap_medium_enqueue(avp, m);
 }
 
 static struct ieee80211_node *
@@ -702,19 +729,20 @@ wtap_node_alloc(struct ieee80211vap *vap, const uint8_t mac[IEEE80211_ADDR_LEN])
 static void
 wtap_node_free(struct ieee80211_node *ni)
 {
-	DWTAP_PRINTF("%s\n", __func__);
 	struct ieee80211com *ic = ni->ni_ic;
-        struct wtap_softc *sc = ic->ic_ifp->if_softc;
+	struct wtap_softc *sc = ic->ic_ifp->if_softc;
+
+	DWTAP_PRINTF("%s\n", __func__);
 	sc->sc_node_free(ni);
 }
 
 int32_t
 wtap_attach(struct wtap_softc *sc, const uint8_t *macaddr)
 {
-
 	struct ifnet *ifp;
 	struct ieee80211com *ic;
-	char wtap_name[] = {'w','T','a','p',sc->id,'_','t','a','s','k','q','\0'};
+	char wtap_name[] = {'w','T','a','p',sc->id,
+	    '_','t','a','s','k','q','\0'};
 
 	DWTAP_PRINTF("%s\n", __func__);
 
@@ -796,7 +824,7 @@ wtap_attach(struct wtap_softc *sc, const uint8_t *macaddr)
 	ic->ic_node_free = wtap_node_free;
 
 #if 0
-	//ic->ic_node_getsignal = myath_node_getsignal;
+	ic->ic_node_getsignal = myath_node_getsignal;
 #endif
 	ic->ic_scan_start = wtap_scan_start;
 	ic->ic_scan_end = wtap_scan_end;
@@ -809,25 +837,27 @@ wtap_attach(struct wtap_softc *sc, const uint8_t *macaddr)
 	    WTAP_RX_RADIOTAP_PRESENT);
 
 	/* Work here, we must find a way to populate the rate table */
-	//if(ic->ic_rt == NULL){
-	    //printf("no table for ic_curchan\n");
-	//    ic->ic_rt = ieee80211_get_ratetable(&ic->ic_channels[0]);
-	//}
-// 	printf("ic->ic_rt =%p\n", ic->ic_rt);
-// 	printf("rate count %d\n", ic->ic_rt->rateCount);
-// 	
-// 	uint8_t code = ic->ic_rt->info[0].dot11Rate;
-// 	uint8_t cix = ic->ic_rt->info[0].ctlRateIndex;
-// 	uint8_t ctl_rate = ic->ic_rt->info[cix].dot11Rate;
-// 	printf("code=%d, cix=%d, ctl_rate=%d\n", code, cix, ctl_rate);
-// 		
-// 	uint8_t rix0 = ic->ic_rt->rateCodeToIndex[130];
-// 	uint8_t rix1 = ic->ic_rt->rateCodeToIndex[132];
-// 	uint8_t rix2 = ic->ic_rt->rateCodeToIndex[139];
-// 	uint8_t rix3 = ic->ic_rt->rateCodeToIndex[150];
-// 	printf("rix0 %u,rix1 %u,rix2 %u,rix3 %u\n", rix0,rix1,rix2,rix3);
-// 	printf("lpAckDuration=%u\n", ic->ic_rt->info[0].lpAckDuration);
-// 	printf("rate=%d\n", ic->ic_rt->info[0].rateKbps);
+#if 0
+	if(ic->ic_rt == NULL){
+		printf("no table for ic_curchan\n");
+		ic->ic_rt = ieee80211_get_ratetable(&ic->ic_channels[0]);
+	}
+	printf("ic->ic_rt =%p\n", ic->ic_rt);
+	printf("rate count %d\n", ic->ic_rt->rateCount);
+
+	uint8_t code = ic->ic_rt->info[0].dot11Rate;
+	uint8_t cix = ic->ic_rt->info[0].ctlRateIndex;
+	uint8_t ctl_rate = ic->ic_rt->info[cix].dot11Rate;
+	printf("code=%d, cix=%d, ctl_rate=%d\n", code, cix, ctl_rate);
+
+	uint8_t rix0 = ic->ic_rt->rateCodeToIndex[130];
+	uint8_t rix1 = ic->ic_rt->rateCodeToIndex[132];
+	uint8_t rix2 = ic->ic_rt->rateCodeToIndex[139];
+	uint8_t rix3 = ic->ic_rt->rateCodeToIndex[150];
+	printf("rix0 %u,rix1 %u,rix2 %u,rix3 %u\n", rix0,rix1,rix2,rix3);
+	printf("lpAckDuration=%u\n", ic->ic_rt->info[0].lpAckDuration);
+	printf("rate=%d\n", ic->ic_rt->info[0].rateKbps);
+#endif
 	return 0;
 }
 

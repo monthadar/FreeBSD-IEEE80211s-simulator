@@ -73,12 +73,14 @@
 
 #include <net/vnet.h>
 
-//#ifdef INET
 #include <netinet/in.h>
 #include <netinet/if_ether.h>
 
-//#define DWTAP_PRINTF(...) printf(__VA_ARGS__)
+#if 0
+#define DWTAP_PRINTF(...) printf(__VA_ARGS__)
+#else
 #define DWTAP_PRINTF(...)
+#endif
 
 #include "if_wtapioctl.h"
 
@@ -101,27 +103,27 @@ struct wtap_node {
 
 struct wtap_buf {
 	STAILQ_ENTRY(wtap_buf)	bf_list;
-	struct mbuf		*m;		/* mbuf for buf */
+	struct mbuf		*m;	/* mbuf for buf */
 };
 typedef STAILQ_HEAD(, wtap_buf) wtap_bufhead;
 
-#define	WTAP_BUF_BUSY	0x00000002	/* (tx) desc owned by h/w */
+#define	WTAP_BUF_BUSY 0x00000002	/* (tx) desc owned by h/w */
 
 struct wtap_vap {
 	struct ieee80211vap av_vap;		/* base class */
 	int32_t			id;		/* wtap id */
-	struct cdev 		*av_dev;	/* cdev for injecting frames from userspace */
-	struct wtap_medium	*av_md;		/* back pointer to wtap_medium */
+	struct cdev 		*av_dev;	/* userspace injecting frames */
+	struct wtap_medium	*av_md;		/* back pointer */
 	struct mbuf *beacon;			/* beacon */
 	struct ieee80211_node	*bf_node;	/* pointer to the node */
 	struct ieee80211_beacon_offsets av_boff;/* dynamic update state */
 	struct callout		av_swba;	/* software beacon alert */
 	uint32_t		av_bcinterval;	/* beacon interval */
-	void		(*av_recv_mgmt)(struct ieee80211_node *,
-				struct mbuf *, int, int, int);
-	int		(*av_newstate)(struct ieee80211vap *,
-				enum ieee80211_state, int);
-	void		(*av_bmiss)(struct ieee80211vap *);
+	void (*av_recv_mgmt)(struct ieee80211_node *,
+	    struct mbuf *, int, int, int);
+	int (*av_newstate)(struct ieee80211vap *,
+	    enum ieee80211_state, int);
+	void (*av_bmiss)(struct ieee80211vap *);
 };
 #define	WTAP_VAP(vap)	((struct wtap_vap *)(vap))
 
@@ -133,15 +135,12 @@ struct wtap_softc {
 	struct ifnet		*sc_ifp;	/* interface common */
 	struct wtap_medium	*sc_md;		/* interface medium */
 	struct ieee80211_node*	(* sc_node_alloc)
-				(struct ieee80211vap *, const uint8_t [IEEE80211_ADDR_LEN]);
-	void 			(*sc_node_free)(struct ieee80211_node *);
-	int	(*if_output)		/* output routine (enqueue) */
-		(struct ifnet *, struct mbuf *, struct sockaddr *,
-		     struct route *);
-      	void	(*if_input)		/* input routine (from h/w driver) */
-		(struct ifnet *, struct mbuf *);
-      	int	(*if_transmit)		/* initiate output routine */
-		(struct ifnet *, struct mbuf *);
+	    (struct ieee80211vap *, const uint8_t [IEEE80211_ADDR_LEN]);
+	void (*sc_node_free)(struct ieee80211_node *);
+	int (*if_output)			/* output routine (enqueue) */
+	    (struct ifnet *, struct mbuf *, struct sockaddr *, struct route *);
+	void (*if_input) (struct ifnet *, struct mbuf *);/* from h/w driver */
+	int (*if_transmit)(struct ifnet *, struct mbuf *);/* output routine */
 	struct mtx		sc_mtx;		/* master lock (recursive) */
 	struct taskqueue	*sc_tq;		/* private task queue */
 	wtap_bufhead		sc_rxbuf;	/* receive buffer */

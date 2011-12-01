@@ -42,7 +42,6 @@ struct wtap_hal {
 	struct wtap_plugin	*plugin;
 	struct wtap_softc 	*hal_devs[MAX_NBR_WTAP];
 };
-//MALLOC_DECLARE(M_WTAP_HAL);
 
 void init_hal(struct wtap_hal *);
 void deinit_hal(struct wtap_hal *);

@@ -47,7 +47,6 @@
 #include <sys/socketvar.h>
 #include <sys/errno.h>
 #include <sys/callout.h>
-//#include <sys/bus.h>
 #include <sys/endian.h>
 #include <sys/kthread.h>
 #include <sys/taskqueue.h>
@@ -76,7 +75,6 @@
 #include <sys/uio.h>    /* uio struct */
 
 
-//#ifdef INET
 #include <netinet/in.h>
 #include <netinet/if_ether.h>
 
@@ -90,12 +88,11 @@
 
 MALLOC_DEFINE(M_WTAP, "wtap", "wtap wireless simulator");
 MALLOC_DEFINE(M_WTAP_PACKET, "wtap packet", "wtap wireless simulator packet");
-MALLOC_DEFINE(M_WTAP_RXBUF, "wtap rxbuf", "wtap wireless simulator recieve buffer");
+MALLOC_DEFINE(M_WTAP_RXBUF, "wtap rxbuf",
+    "wtap wireless simulator recieve buffer");
 MALLOC_DEFINE(M_WTAP_PLUGIN, "wtap plugin", "wtap wireless simulator plugin");
 
 static struct wtap_hal		*hal;
-//static struct vnet		*master_vnet;
-
 
 /* Function prototypes */
 static d_ioctl_t	wtap_ioctl;
@@ -108,73 +105,82 @@ static struct cdevsw wtap_cdevsw = {
 	.d_name =	"wtapctl",
 };
 
-int wtap_ioctl(struct cdev *dev, u_long cmd, caddr_t data,
-		      int fflag, struct thread *td){
-      int error = 0;
-      CURVNET_SET(CRED_TO_VNET(curthread->td_ucred));
-      switch(cmd) {
+int
+wtap_ioctl(struct cdev *dev, u_long cmd, caddr_t data,
+    int fflag, struct thread *td)
+{
+	int error = 0;
+
+	CURVNET_SET(CRED_TO_VNET(curthread->td_ucred));
+
+	switch(cmd) {
 	case WTAPIOCTLCRT:
-	  if(new_wtap(hal, *(int *)data)){
-	      error = EINVAL;
-	  }
-	  break;
+		if(new_wtap(hal, *(int *)data))
+			error = EINVAL;
+		break;
 	case WTAPIOCTLDEL:
-	  if(free_wtap(hal, *(int *)data)){
-	      error = EINVAL;
-	  }
-	  break;
+		if(free_wtap(hal, *(int *)data))
+			error = EINVAL;
+		break;
 	default:
-	  DWTAP_PRINTF("Unkown WTAP IOCTL\n");
-	  error = EINVAL;
-      }
-      CURVNET_RESTORE();
-      return error;
+		DWTAP_PRINTF("Unkown WTAP IOCTL\n");
+		error = EINVAL;
+	}
+
+	CURVNET_RESTORE();
+	return error;
 }
 
 
 /* The function called at load/unload. */
-static int event_handler(module_t module, int event, void *arg) {
+static int
+event_handler(module_t module, int event, void *arg) 
+{
 	struct visibility_plugin *plugin;
-        int e = 0; /* Error, 0 for normal return status */
-        switch (event) {
-        case MOD_LOAD:		
-		sdev = make_dev(&wtap_cdevsw,0,UID_ROOT,GID_WHEEL,0600,(const char *)"wtapctl");
-		hal = (struct wtap_hal *)malloc(sizeof(struct wtap_hal), M_WTAP, M_NOWAIT | M_ZERO);
+	int e = 0; /* Error, 0 for normal return status */
+
+	switch (event) {
+	case MOD_LOAD:
+		sdev = make_dev(&wtap_cdevsw,0,UID_ROOT,
+		    GID_WHEEL,0600,(const char *)"wtapctl");
+		hal = (struct wtap_hal *)malloc(sizeof(struct wtap_hal),
+		    M_WTAP, M_NOWAIT | M_ZERO);
 		bzero(hal, sizeof(struct wtap_hal));
-		
+
 		init_hal(hal);
-		
+
 		/* Setting up a simple plugin */
 		plugin = (struct visibility_plugin *)malloc
-					(sizeof(struct visibility_plugin), M_WTAP_PLUGIN, M_NOWAIT | M_ZERO);
+		    (sizeof(struct visibility_plugin), M_WTAP_PLUGIN,
+		    M_NOWAIT | M_ZERO);
 		plugin->base.hal  = hal;
 		plugin->base.init = visibility_init;
 		plugin->base.deinit = visibility_deinit;
 		plugin->base.work = visibility_work;
 		register_plugin(hal, (struct wtap_plugin *)plugin);
-		
+
                 printf("Loaded wtap wireless simulator\n");
                 break;
-        case MOD_UNLOAD:		
+	case MOD_UNLOAD:
 		destroy_dev(sdev);
 		deregister_plugin(hal);
 		deinit_hal(hal);
 		free(hal, M_WTAP);
-                printf("Unloading wtap wireless simulator\n");
-                break;
-        default:
-                e = EOPNOTSUPP; /* Error, Operation Not Supported */
-                break;
-        }
-       
-        return(e);
+		printf("Unloading wtap wireless simulator\n");
+		break;
+	default:
+		e = EOPNOTSUPP; /* Error, Operation Not Supported */
+		break;
+	}
+
+	return(e);
 }
 
 /* The second argument of DECLARE_MODULE. */
 static moduledata_t wtap_conf = {
-    "wtap",    /* module name */
-     event_handler,  /* event handler */
-     NULL            /* extra data */
+	"wtap",		/* module name */
+	event_handler,	/* event handler */
+	NULL		/* extra data */
 };
 
 DECLARE_MODULE(wtap, wtap_conf, SI_SUB_DRIVERS, SI_ORDER_MIDDLE);

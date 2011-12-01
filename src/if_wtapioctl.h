@@ -33,7 +33,8 @@
  */
 
 /*
- * Ioctl-related defintions for the Wireless TAP based on Atheros Wireless LAN controller driver.
+ * Ioctl-related defintions for the Wireless TAP
+ * based on Atheros Wireless LAN controller driver.
  */
 
 #ifndef _DEV_WTAP_WTAPIOCTL_H
@@ -45,8 +46,8 @@
 #define	SIOCGATHSTATS	_IOWR('i', 137, struct ifreq)
 #define	SIOCZATHSTATS	_IOWR('i', 139, struct ifreq)
 
-#define WTAPIOCTLCRT _IOW('W', 1, int)
-#define WTAPIOCTLDEL _IOW('W', 2, int)
+#define WTAPIOCTLCRT	_IOW('W', 1, int)
+#define WTAPIOCTLDEL	_IOW('W', 2, int)
 
 struct wtap_stats {
 	u_int32_t	ast_watchdog;	/* device reset by watchdog */
@@ -143,17 +144,19 @@ struct wtap_stats {
 
 struct wtap_rx_radiotap_header {
 	struct ieee80211_radiotap_header wr_ihdr;
-// 	u_int64_t	wr_tsf;
-// 	u_int8_t	wr_flags;
-// 	u_int8_t	wr_rate;
-// 	int8_t		wr_antsignal;
-// 	int8_t		wr_antnoise;
-// 	u_int8_t	wr_antenna;
-// 	u_int8_t	wr_pad[3];
-// 	u_int32_t	wr_chan_flags;
-// 	u_int16_t	wr_chan_freq;
-// 	u_int8_t	wr_chan_ieee;
-// 	int8_t		wr_chan_maxpow;
+#if 0
+	u_int64_t	wr_tsf;
+	u_int8_t	wr_flags;
+	u_int8_t	wr_rate;
+	int8_t		wr_antsignal;
+	int8_t		wr_antnoise;
+	u_int8_t	wr_antenna;
+	u_int8_t	wr_pad[3];
+	u_int32_t	wr_chan_flags;
+	u_int16_t	wr_chan_freq;
+	u_int8_t	wr_chan_ieee;
+	int8_t		wr_chan_maxpow;
+#endif
 } __packed;
 
 #define WTAP_TX_RADIOTAP_PRESENT (		\
@@ -161,15 +164,17 @@ struct wtap_rx_radiotap_header {
 
 struct wtap_tx_radiotap_header {
 	struct ieee80211_radiotap_header wt_ihdr;
-// 	u_int64_t	wt_tsf;
-// 	u_int8_t	wt_flags;
-// 	u_int8_t	wt_rate;
-// 	u_int8_t	wt_txpower;
-// 	u_int8_t	wt_antenna;
-// 	u_int32_t	wt_chan_flags;
-// 	u_int16_t	wt_chan_freq;
-// 	u_int8_t	wt_chan_ieee;
-// 	int8_t		wt_chan_maxpow;
+#if 0
+	u_int64_t	wt_tsf;
+	u_int8_t	wt_flags;
+	u_int8_t	wt_rate;
+	u_int8_t	wt_txpower;
+	u_int8_t	wt_antenna;
+	u_int32_t	wt_chan_flags;
+	u_int16_t	wt_chan_freq;
+	u_int8_t	wt_chan_ieee;
+	int8_t		wt_chan_maxpow;
+#endif
 } __packed;
 
 #endif

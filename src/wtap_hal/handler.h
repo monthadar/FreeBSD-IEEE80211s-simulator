@@ -35,15 +35,15 @@
 #include "../if_wtapvar.h"
 
 struct timehandler {
-      struct callout		cb;
-      void (*proc)(void *);
+	struct callout		cb;
+	void (*proc)(void *);
 };
 
 struct taskqueue;
 
 struct eventhandler {
-      struct taskqueue		*tq;
-      struct task		proc;
+	struct taskqueue		*tq;
+	struct task		proc;
 };
 
 #endif

@@ -47,7 +47,6 @@
 #include <sys/socketvar.h>
 #include <sys/errno.h>
 #include <sys/callout.h>
-//#include <sys/bus.h>
 #include <sys/endian.h>
 #include <sys/kthread.h>
 #include <sys/taskqueue.h>
@@ -75,8 +74,6 @@
 #include <sys/conf.h>   /* cdevsw struct */
 #include <sys/uio.h>    /* uio struct */
 
-
-//#ifdef INET
 #include <netinet/in.h>
 #include <netinet/if_ether.h>
 
@@ -86,8 +83,6 @@ static struct visibility_plugin		*vis_plugin;
 
 /* Function prototypes */
 static d_ioctl_t	vis_ioctl;
-//static int vis_ioctl(struct cdev *, u_long , caddr_t ,
-		      //int , struct thread *);
 
 static struct cdev *sdev;
 static struct cdevsw vis_cdevsw = {
@@ -97,16 +92,22 @@ static struct cdevsw vis_cdevsw = {
 	.d_name =	"visctl",
 };
 
-void visibility_init(struct wtap_plugin *plugin){
-	//struct wtap_hal *hal = plugin->hal;
-	sdev = make_dev(&vis_cdevsw,0,UID_ROOT,GID_WHEEL,0600,(const char *)"visctl");
+void
+visibility_init(struct wtap_plugin *plugin)
+{
+
+	sdev = make_dev(&vis_cdevsw,0,UID_ROOT,GID_WHEEL,0600,
+	    (const char *)"visctl");
 	vis_plugin = (struct visibility_plugin *) plugin;
-	mtx_init(&vis_plugin->pl_mtx, "visibility_plugin mtx", NULL, MTX_DEF | MTX_RECURSE);
-	//medium_open(hal->hal_md);
+	mtx_init(&vis_plugin->pl_mtx, "visibility_plugin mtx",
+	    NULL, MTX_DEF | MTX_RECURSE);
 	printf("Using visibility wtap plugin...\n");
 }
 
-void visibility_deinit(){
+void
+visibility_deinit()
+{
+
 	destroy_dev(sdev);
 	mtx_destroy(&vis_plugin->pl_mtx);
 	free(vis_plugin, M_WTAP_PLUGIN);
@@ -114,97 +115,120 @@ void visibility_deinit(){
 }
 
 /* We need to use a mutex lock when we read out a visibility map
- * and when we change visibility map from user space through IOCTL */
-void visibility_work(struct packet *p){
-      struct wtap_hal *hal = (struct wtap_hal *)vis_plugin->base.hal;
-      KASSERT(p->m != 0xdeadc0de || p->m != NULL, 
-	      ("[%s] got a corrupt packet from master queue, p->m=%p, p->id=%d\n", __func__, p->m, p->id));
-      DWTAP_PRINTF("[%d] BROADCASTING m=%p\n", p->id, p->m);
-//       for(int i=0; i<MAX_NBR_WTAP; ++i){
-// 	  if(i != p->id && hal->hal_devs[i] != NULL && hal->hal_devs[i]->up == 1){
-// 	      struct wtap_softc *sc = hal->hal_devs[i];
-// 	      struct mbuf *m = m_dup(p->m, M_DONTWAIT);
-// 	      DWTAP_PRINTF("[%d] duplicated old_m=%p to new_m=%p\n", p->id, p->m, m);
-// 	      wtap_inject(sc, m);
-// 	  }
-//       }
-      mtx_lock(&vis_plugin->pl_mtx);
-      struct vis_map *map = &vis_plugin->pl_node[p->id];
-      mtx_unlock(&vis_plugin->pl_mtx);
-      
-      for(int i=0; i<ARRAY_SIZE; ++i){
-	  uint32_t index = map->map[i];
-	  for(int j=0; j<32; ++j){
-	      int vis = index & 0x01;
-	      if(vis){
-		int k = i*ARRAY_SIZE + j;
-		if(hal->hal_devs[k] != NULL && hal->hal_devs[k]->up == 1){
-		  struct wtap_softc *sc = hal->hal_devs[k];
-		  struct mbuf *m = m_dup(p->m, M_DONTWAIT);
-		  DWTAP_PRINTF("[%d] duplicated old_m=%p to new_m=%p\n", p->id, p->m, m);
-		  //printf("[%d] sending to %d\n", p->id, k);
-		  wtap_inject(sc, m);
+ * and when we change visibility map from user space through IOCTL
+ */
+void
+visibility_work(struct packet *p)
+{
+	struct wtap_hal *hal = (struct wtap_hal *)vis_plugin->base.hal;
+	struct vis_map *map;
+	KASSERT(p->m != 0xdeadc0de || p->m != NULL,
+	    ("[%s] got a corrupt packet from master queue, p->m=%p, p->id=%d\n",
+	    __func__, p->m, p->id));
+	DWTAP_PRINTF("[%d] BROADCASTING m=%p\n", p->id, p->m);
+	mtx_lock(&vis_plugin->pl_mtx);
+	map = &vis_plugin->pl_node[p->id];
+	mtx_unlock(&vis_plugin->pl_mtx);
+
+	/* This is O(n*n) which is not optimal for large
+	 * number of nodes. Another way of doing it is
+	 * creating groups of nodes that hear each other.
+	 * Atleast for this simple static node plugin.
+	 */
+	for(int i=0; i<ARRAY_SIZE; ++i){
+		uint32_t index = map->map[i];
+		for(int j=0; j<32; ++j){
+			int vis = index & 0x01;
+			if(vis){
+				int k = i*ARRAY_SIZE + j;
+				if(hal->hal_devs[k] != NULL
+				    && hal->hal_devs[k]->up == 1){
+					struct wtap_softc *sc =
+					    hal->hal_devs[k];
+					struct mbuf *m =
+					    m_dup(p->m, M_DONTWAIT);
+					DWTAP_PRINTF("[%d] duplicated old_m=%p"
+					    "to new_m=%p\n", p->id, p->m, m);
+#if 0
+					printf("[%d] sending to %d\n",
+					    p->id, k);
+#endif
+					wtap_inject(sc, m);
+				}
+			}
+			index = index >> 1;
 		}
-	      }
-	      index = index >> 1;
-	  }
-      }
+	}
 }
 
-static void add_link(struct link *l)
+static void
+add_link(struct link *l)
 {
-      mtx_lock(&vis_plugin->pl_mtx);
-      struct vis_map *map = &vis_plugin->pl_node[l->id1];
-      int index = l->id2/ARRAY_SIZE;
-      int bit = l->id2 % ARRAY_SIZE;
-      uint32_t value = 1 << bit;
-      map->map[index] = map->map[index] | value;
-      mtx_unlock(&vis_plugin->pl_mtx);
-      //printf("l->id1=%d, l->id2=%d, map->map[%d] = %u, bit=%d\n", l->id1, l->id2, index, map->map[index], bit);
-      //printf("index=%d, bit=%d\n", index, bit);
+
+	mtx_lock(&vis_plugin->pl_mtx);
+	struct vis_map *map = &vis_plugin->pl_node[l->id1];
+	int index = l->id2/ARRAY_SIZE;
+	int bit = l->id2 % ARRAY_SIZE;
+	uint32_t value = 1 << bit;
+	map->map[index] = map->map[index] | value;
+	mtx_unlock(&vis_plugin->pl_mtx);
+#if 0
+	printf("l->id1=%d, l->id2=%d, map->map[%d] = %u, bit=%d\n",
+	    l->id1, l->id2, index, map->map[index], bit);
+#endif
 }
 
-static void del_link(struct link *l)
+static void
+del_link(struct link *l)
 {
-      mtx_lock(&vis_plugin->pl_mtx);
-      struct vis_map *map = &vis_plugin->pl_node[l->id1];
-      int index = l->id2/ARRAY_SIZE;
-      int bit = l->id2 % ARRAY_SIZE;
-      uint32_t value = 1 << bit;
-      map->map[index] = map->map[index] & ~value;
-      mtx_unlock(&vis_plugin->pl_mtx);
-      //printf("map->map[index] = %u\n", map->map[index]);
+
+	mtx_lock(&vis_plugin->pl_mtx);
+	struct vis_map *map = &vis_plugin->pl_node[l->id1];
+	int index = l->id2/ARRAY_SIZE;
+	int bit = l->id2 % ARRAY_SIZE;
+	uint32_t value = 1 << bit;
+	map->map[index] = map->map[index] & ~value;
+	mtx_unlock(&vis_plugin->pl_mtx);
+#if 0
+	printf("map->map[index] = %u\n", map->map[index]);
+#endif
 }
 
 
-int vis_ioctl(struct cdev *dev, u_long cmd, caddr_t data,
-		      int fflag, struct thread *td){
-      struct wtap_hal *hal = vis_plugin->base.hal;
-      struct link l;
-      int op;
-      int error = 0;
-      CURVNET_SET(CRED_TO_VNET(curthread->td_ucred));
-      switch(cmd) {
+int
+vis_ioctl(struct cdev *dev, u_long cmd, caddr_t data,
+    int fflag, struct thread *td)
+{
+	struct wtap_hal *hal = vis_plugin->base.hal;
+	struct link l;
+	int op;
+	int error = 0;
+
+	CURVNET_SET(CRED_TO_VNET(curthread->td_ucred));
+	switch(cmd) {
 	case VISIOCTLOPEN:
-	  op =  *(int *)data; 
-	  if(op == 0)
-	    medium_close(hal->hal_md);
-	  else
-	    medium_open(hal->hal_md);
-	  break;
+		op =  *(int *)data; 
+		if(op == 0)
+			medium_close(hal->hal_md);
+		else
+			medium_open(hal->hal_md);
+		break;
 	case VISIOCTLLINK:
-	  l = *(struct link *)data;
-	  if(l.op == 0){
-	      del_link(&l);
-	  }else{
-	      add_link(&l);
-	  }
-	  //printf("op=%d, id1=%d, id2=%d\n", l.op, l.id1, l.id2);
-	  break;
+		l = *(struct link *)data;
+		if(l.op == 0)
+			del_link(&l);
+		else
+			add_link(&l);
+#if 0
+		printf("op=%d, id1=%d, id2=%d\n", l.op, l.id1, l.id2);
+#endif
+		break;
 	default:
-	  DWTAP_PRINTF("Unkown WTAP IOCTL\n");
-	  error = EINVAL;
-      }
-      CURVNET_RESTORE();
-      return error;
+		DWTAP_PRINTF("Unkown WTAP IOCTL\n");
+		error = EINVAL;
+	}
+
+	CURVNET_RESTORE();
+	return error;
 }
+
