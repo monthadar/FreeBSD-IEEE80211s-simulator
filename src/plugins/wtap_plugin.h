@@ -37,10 +37,11 @@
 
 
 struct wtap_plugin {
-	struct wtap_hal *hal;
+	struct cdev	*wp_sdev;
+	struct wtap_hal	*wp_hal;
 	void (*init)(struct wtap_plugin *);
-	void (*deinit)(void);
-	void (*work)(struct packet *p);
+	void (*deinit)(struct wtap_plugin *);
+	void (*work)(struct wtap_plugin *, struct packet *p);
 };
 
 #endif

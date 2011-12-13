@@ -153,7 +153,7 @@ event_handler(module_t module, int event, void *arg)
 		plugin = (struct visibility_plugin *)malloc
 		    (sizeof(struct visibility_plugin), M_WTAP_PLUGIN,
 		    M_NOWAIT | M_ZERO);
-		plugin->base.hal  = hal;
+		plugin->base.wp_hal  = hal;
 		plugin->base.init = visibility_init;
 		plugin->base.deinit = visibility_deinit;
 		plugin->base.work = visibility_work;

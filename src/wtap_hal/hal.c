@@ -48,7 +48,7 @@ hal_tx_proc(void *arg, int npending)
 		if(p == NULL)
 		return;
 
-		hal->plugin->work(p);
+		hal->plugin->work(hal->plugin, p);
 
 #if 0
 		DWTAP_PRINTF("[%d] freeing m=%p\n", p->id, p->m);
@@ -86,7 +86,8 @@ void
 deregister_plugin(struct wtap_hal *hal)
 {
 
-	hal->plugin->deinit();
+	hal->plugin->deinit(hal->plugin);
+	hal->plugin = NULL; /* catch illegal usages */
 }
 
 void

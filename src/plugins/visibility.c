@@ -79,12 +79,9 @@
 
 #include "visibility.h"
 
-static struct visibility_plugin		*vis_plugin;
-
 /* Function prototypes */
 static d_ioctl_t	vis_ioctl;
 
-static struct cdev *sdev;
 static struct cdevsw vis_cdevsw = {
 	.d_version =	D_VERSION,
 	.d_flags =	0,
@@ -95,20 +92,24 @@ static struct cdevsw vis_cdevsw = {
 void
 visibility_init(struct wtap_plugin *plugin)
 {
+	struct visibility_plugin *vis_plugin;
 
-	sdev = make_dev(&vis_cdevsw,0,UID_ROOT,GID_WHEEL,0600,
-	    (const char *)"visctl");
 	vis_plugin = (struct visibility_plugin *) plugin;
+	plugin->wp_sdev = make_dev(&vis_cdevsw,0,UID_ROOT,GID_WHEEL,0600,
+	    (const char *)"visctl");
+	plugin->wp_sdev->si_drv1 = vis_plugin;
 	mtx_init(&vis_plugin->pl_mtx, "visibility_plugin mtx",
 	    NULL, MTX_DEF | MTX_RECURSE);
 	printf("Using visibility wtap plugin...\n");
 }
 
 void
-visibility_deinit()
+visibility_deinit(struct wtap_plugin *plugin)
 {
+	struct visibility_plugin *vis_plugin;
 
-	destroy_dev(sdev);
+	vis_plugin = (struct visibility_plugin *) plugin;
+	destroy_dev(plugin->wp_sdev);
 	mtx_destroy(&vis_plugin->pl_mtx);
 	free(vis_plugin, M_WTAP_PLUGIN);
 	printf("Removing visibility wtap plugin...\n");
@@ -118,10 +119,13 @@ visibility_deinit()
  * and when we change visibility map from user space through IOCTL
  */
 void
-visibility_work(struct packet *p)
+visibility_work(struct wtap_plugin *plugin, struct packet *p)
 {
-	struct wtap_hal *hal = (struct wtap_hal *)vis_plugin->base.hal;
+	struct visibility_plugin *vis_plugin =
+	    (struct visibility_plugin *) plugin;
+	struct wtap_hal *hal = (struct wtap_hal *)vis_plugin->base.wp_hal;
 	struct vis_map *map;
+
 	KASSERT(p->m != 0xdeadc0de || p->m != NULL,
 	    ("[%s] got a corrupt packet from master queue, p->m=%p, p->id=%d\n",
 	    __func__, p->m, p->id));
@@ -162,7 +166,7 @@ visibility_work(struct packet *p)
 }
 
 static void
-add_link(struct link *l)
+add_link(struct visibility_plugin *vis_plugin, struct link *l)
 {
 
 	mtx_lock(&vis_plugin->pl_mtx);
@@ -179,7 +183,7 @@ add_link(struct link *l)
 }
 
 static void
-del_link(struct link *l)
+del_link(struct visibility_plugin *vis_plugin, struct link *l)
 {
 
 	mtx_lock(&vis_plugin->pl_mtx);
@@ -196,10 +200,12 @@ del_link(struct link *l)
 
 
 int
-vis_ioctl(struct cdev *dev, u_long cmd, caddr_t data,
+vis_ioctl(struct cdev *sdev, u_long cmd, caddr_t data,
     int fflag, struct thread *td)
 {
-	struct wtap_hal *hal = vis_plugin->base.hal;
+	struct visibility_plugin *vis_plugin =
+	    (struct visibility_plugin *) sdev->si_drv1;
+	struct wtap_hal *hal = vis_plugin->base.wp_hal;
 	struct link l;
 	int op;
 	int error = 0;
@@ -216,9 +222,9 @@ vis_ioctl(struct cdev *dev, u_long cmd, caddr_t data,
 	case VISIOCTLLINK:
 		l = *(struct link *)data;
 		if(l.op == 0)
-			del_link(&l);
+			del_link(vis_plugin, &l);
 		else
-			add_link(&l);
+			add_link(vis_plugin, &l);
 #if 0
 		printf("op=%d, id1=%d, id2=%d\n", l.op, l.id1, l.id2);
 #endif

@@ -34,6 +34,8 @@
 #include "wtap_plugin.h"
 #include "visibility_ioctl.h"
 
+#define CDEV_GET_SOFTC(x) (x)->si_drv1
+
 #define ARRAY_SIZE (32) //We support a maximum of 1024 nodes for now
 
 struct vis_map {
@@ -41,14 +43,14 @@ struct vis_map {
 };
 
 struct visibility_plugin {
-	struct wtap_plugin base;
+	struct wtap_plugin	base;
 	struct mtx		pl_mtx;
 	struct vis_map pl_node[MAX_NBR_WTAP];
 };
 
 void visibility_init(struct wtap_plugin *);
-void visibility_deinit(void);
-void visibility_work(struct packet *);
+void visibility_deinit(struct wtap_plugin *);
+void visibility_work(struct wtap_plugin *, struct packet *);
 
 #endif
 
